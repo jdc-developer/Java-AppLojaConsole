@@ -1,4 +1,4 @@
-package br.jdc.beans;
+package jdc.loja.beans;
 
 import java.io.Serializable;
 
