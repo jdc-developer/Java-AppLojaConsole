@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jdc-developer</groupId>
+  <artifactId>Java-AppLojaConsole</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Java-AppLojaConsole</name>
+  <description>
+  	Aplicativo simples feito no console do Java simulando uma loja utilizando 
+  	gerência de dados com objetos serializados, evitando assim a necessidade de um banco de 
+  	dados local e possibilitando a execução por qualquer pessoa em qualquer computador que suporte Java. 
+  	(Executável disponível no projeto).
+  </description>
+</project>
