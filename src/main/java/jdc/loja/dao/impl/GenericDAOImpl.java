@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.List;
@@ -28,6 +27,12 @@ public abstract class GenericDAOImpl<C, K> implements GenericDAO<C, K>{
 	private BufferedReader buffReader;
 	private String pasta;
 	
+	/**
+	 * Inicializando a classe com a pasta de destino da entidade em questão
+	 * Importante a inicialização do arquivo .txt de sequence.
+	 * @param pasta
+	 * @throws Excecao
+	 */
 	public GenericDAOImpl(String pasta) throws Excecao {
 		String caminho = persistence + pasta + "sequence.txt";
 		FileReader reader = null;
@@ -53,6 +58,10 @@ public abstract class GenericDAOImpl<C, K> implements GenericDAO<C, K>{
 		}
 	}
 	
+	/**
+	 * Ao cadastrar importante o resgate do dado do arquivo de sequence
+	 * @see GenericDAOImpl
+	 */
 	public void cadastrar(C bean) throws Excecao {
 		try {
 			output = new ObjectOutputStream(new FileOutputStream(persistence + pasta + bean.getClass().toString() + buffReader.readLine()));

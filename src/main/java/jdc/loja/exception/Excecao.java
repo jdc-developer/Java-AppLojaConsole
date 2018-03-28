@@ -3,6 +3,11 @@ package jdc.loja.exception;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Classe de exceção customizada para maior controle sobre erros.
+ * @author Jorge Do Carmo
+ *
+ */
 public class Excecao extends Exception{
 	
 	/**
