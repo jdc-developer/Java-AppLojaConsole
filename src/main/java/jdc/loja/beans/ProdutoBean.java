@@ -2,6 +2,11 @@ package jdc.loja.beans;
 
 import java.io.Serializable;
 
+/**
+ * Bean produto
+ * @author Jorge do Carmo
+ *
+ */
 public class ProdutoBean implements Serializable{
 
 	private static final long serialVersionUID = -7559384053949317302L;
