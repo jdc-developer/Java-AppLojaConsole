@@ -7,4 +7,7 @@ package jdc.loja.view;
  */
 public class ConsoleView {
 
+	public static void main(String[] args) {
+		
+	}
 }

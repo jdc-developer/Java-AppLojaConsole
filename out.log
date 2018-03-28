@@ -1,0 +1,183 @@
+2018-03-28 17:25:25 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:25:25 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:25:25 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:25:25 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:25:25 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:27:56 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:27:56 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:27:56 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:27:56 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:27:56 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:28:07 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:28:07 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:28:07 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:28:07 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:28:07 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:28:28 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:28:28 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:28:28 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:28:28 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:28:28 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:28:41 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:28:41 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:28:41 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:28:41 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:28:41 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:28:55 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:28:55 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:28:55 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:29:28 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:29:28 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:30:19 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:30:19 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:30:19 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:30:19 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:30:19 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:30:25 INFO  TestGenericDAO:42 - Iniciando operação
+2018-03-28 17:30:25 INFO  TestGenericDAO:49 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:30:25 INFO  TestGenericDAO:53 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:30:43 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:30:43 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:39:38 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:39:38 INFO  TestGenericDAO:50 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:39:38 INFO  TestGenericDAO:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:39:38 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:39:38 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:39:56 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:39:56 INFO  TestGenericDAO:50 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:39:56 INFO  TestGenericDAO:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:40:12 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:40:12 INFO  TestGenericDAO:50 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:40:12 INFO  TestGenericDAO:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:40:17 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:40:17 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:40:19 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:40:19 INFO  TestGenericDAO:50 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:40:19 INFO  TestGenericDAO:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:40:35 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:40:35 INFO  TestGenericDAO:50 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:40:35 INFO  TestGenericDAO:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:40:35 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:40:35 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:41:00 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-28 17:41:00 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-28 17:42:42 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:42:42 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:42:42 INFO  TestGenericDAO:62 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-28 17:42:42 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:42:42 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:42:42 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:49:15 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:49:15 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:49:15 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:49:15 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:49:15 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:49:18 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:49:18 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:49:18 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:49:18 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:49:18 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:49:28 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:49:28 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:49:28 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:49:28 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:50:26 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:51:12 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:51:12 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:51:12 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:51:12 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:51:12 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:51:18 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:51:18 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:51:18 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:51:18 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:51:18 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:51:30 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:51:30 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:51:30 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:51:30 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:51:38 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:51:41 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:51:41 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:51:41 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:51:41 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:52:15 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:52:32 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:52:32 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:52:32 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:52:32 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:52:32 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:52:37 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:52:37 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:52:37 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:52:37 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:52:37 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:52:52 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:52:52 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:52:52 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:52:52 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:56:09 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:56:09 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:56:09 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:56:09 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:56:09 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:56:13 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:56:13 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:56:13 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:56:13 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:56:13 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:56:29 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:56:29 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:56:29 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 17:56:29 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 17:56:48 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 17:57:39 INFO  TestGenericDAO:43 - Iniciando operação
+2018-03-28 17:57:39 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 17:57:39 INFO  TestGenericDAO:74 - 'sequence.txt' encontrado
+2018-03-28 17:57:39 INFO  TestGenericDAO:88 - Cadastrando...
+2018-03-28 17:57:56 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:01:13 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-28 18:01:13 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:01:13 INFO  TestGenericDAO:74 - 'sequence.txt' encontrado
+2018-03-28 18:01:13 INFO  TestGenericDAO:88 - Cadastrando...
+2018-03-28 18:01:31 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:03:27 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-28 18:03:27 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:03:27 INFO  TestGenericDAO:74 - 'sequence.txt' encontrado
+2018-03-28 18:03:27 INFO  TestGenericDAO:88 - Cadastrando...
+2018-03-28 18:03:32 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:04:01 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-28 18:04:01 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:04:01 INFO  TestGenericDAO:74 - 'sequence.txt' encontrado
+2018-03-28 18:04:01 INFO  TestGenericDAO:88 - Cadastrando...
+2018-03-28 18:04:09 INFO  TestGenericDAO:107 - Cadastrado com sucesso
+2018-03-28 18:05:21 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-28 18:05:21 INFO  TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:05:21 INFO  TestGenericDAO:74 - 'sequence.txt' encontrado
+2018-03-28 18:05:21 INFO  TestGenericDAO:88 - Cadastrando...
+2018-03-28 18:05:26 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:10:58 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-28 18:10:58 INFO  TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:10:58 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 18:10:58 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 18:10:58 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:11:21 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-28 18:11:21 INFO  TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:11:21 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 18:11:21 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 18:11:28 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:11:43 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-28 18:11:43 INFO  TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:11:43 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 18:11:43 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 18:11:48 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:14:04 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-28 18:14:04 INFO  TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:14:04 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 18:14:04 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 18:14:08 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-28 18:15:05 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-28 18:15:05 INFO  TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-28 18:15:05 INFO  TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-28 18:15:05 INFO  TestGenericDAO:89 - Cadastrando...
+2018-03-28 18:15:09 INFO  TestGenericDAO:115 - Cadastrado com sucesso
