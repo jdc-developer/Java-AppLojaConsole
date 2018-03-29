@@ -15,6 +15,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jdc.loja.beans.StreamingBean;
 import jdc.loja.dao.GenericDAO;
 import jdc.loja.exception.Excecao;
 import jdc.loja.test.dao.TestGenericDAO;
@@ -31,9 +32,11 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 
 	private String persistence = System.getProperty("user.dir") + "\\app-resources\\";
 	private static final Logger log = LoggerFactory.getLogger(TestGenericDAO.class);
-	protected ObjectOutputStream output;
-	private FileReader reader;
-	private BufferedReader buffReader;
+	
+	/**
+	 * Importante o streaming bean para gerenciar todas as instancias dos readers, streams e writers
+	 */
+	private StreamingBean stream;
 	
 	/**
 	 * Inicializando a classe com a pasta de destino da entidade em questão
@@ -55,27 +58,10 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 		
 		String caminho = persistence + "sequence.txt";
 		try {
-			try {
-				log.info("Buscando arquivo 'sequence.txt'");
-				
-				reader = new FileReader(caminho);
-			} catch (FileNotFoundException e) {
-				log.info("Arquivo não encontrado, criando 'sequence.txt'");
-				
-				FileWriter writer = new FileWriter(caminho);
-				PrintWriter dados = new PrintWriter(writer);
-				dados.println(1);
-				dados.close();
-				writer.close();
-				reader = new FileReader(caminho);
-			}
-			finally {
-				buffReader = new BufferedReader(reader);
-				
-				log.info("'sequence.txt' encontrado");
-			}
-		} catch (Exception e1) {
-			e1.printStackTrace();
+			//Criando o streaming bean
+			stream = new StreamingBean(caminho);
+		} catch (Exception e) {
+			e.printStackTrace();
 			throw new Excecao("Erro ao criar diretório de arquivos");
 		}
 	}
@@ -91,10 +77,10 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 			
 			String beanClass = bean.getClass().toString();
 			String beanAmigavel = beanClass.substring(beanClass.lastIndexOf(".") + 1, beanClass.length());
-			String sequence = buffReader.readLine();
+			String sequence = stream.getBuffReader().readLine();
 			
 			String path = persistence + beanAmigavel + sequence;
-			output = new ObjectOutputStream(new FileOutputStream(path));
+			stream.setOutput(new ObjectOutputStream(new FileOutputStream(path)));
 			
 			//Buscar o metodo setCodigo da classe genérica
 			Class<C> classe = 
@@ -105,10 +91,21 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 			Method metodo = classe.getMethod("setCodigo", int.class);
 			
 			//Invocando o método setando chave primária
-			metodo.invoke(bean, Integer.parseInt(sequence));
+			int id = Integer.parseInt(sequence);
+			metodo.invoke(bean, id);
 			
 			//Commit
-			output.writeObject(bean);
+			stream.getOutput().writeObject(bean);
+			FileWriter writerLocal = new FileWriter(persistence + "sequence.txt");
+			PrintWriter printLocal = new PrintWriter(writerLocal);
+			printLocal.println(id + 1);
+			
+			//Fechando os streams
+			printLocal.close();
+			writerLocal.close();
+			stream.getBuffReader().close();
+			stream.getReader().close();
+			stream.getOutput().close();
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new Excecao("Erro ao cadastrar");

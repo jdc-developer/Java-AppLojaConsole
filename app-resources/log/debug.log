@@ -1,0 +1,375 @@
+2018-03-29 10:45:23 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 10:45:23 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 10:45:23 DEBUG TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-29 10:45:23 DEBUG TestGenericDAO:63 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 10:45:23 DEBUG TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-29 10:45:23 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 10:45:23 INFO  TestGenericDAO:90 - Cadastrando...
+2018-03-29 10:45:23 INFO  TestGenericDAO:116 - Cadastrado com sucesso
+2018-03-29 10:47:34 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 10:47:34 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 10:47:34 DEBUG TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-29 10:47:34 DEBUG TestGenericDAO:76 - 'sequence.txt' encontrado
+2018-03-29 10:47:34 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 10:47:34 INFO  TestGenericDAO:91 - Cadastrando...
+2018-03-29 10:47:34 INFO  TestGenericDAO:117 - Cadastrado com sucesso
+2018-03-29 10:48:03 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 10:48:03 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 10:48:03 DEBUG TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-29 10:48:03 DEBUG TestGenericDAO:76 - 'sequence.txt' encontrado
+2018-03-29 10:48:03 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 10:48:03 INFO  TestGenericDAO:91 - Cadastrando...
+2018-03-29 10:48:03 INFO  TestGenericDAO:117 - Cadastrado com sucesso
+2018-03-29 10:48:24 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 10:48:24 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 10:48:24 DEBUG TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-29 10:48:24 DEBUG TestGenericDAO:76 - 'sequence.txt' encontrado
+2018-03-29 10:48:24 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 10:48:24 INFO  TestGenericDAO:91 - Cadastrando...
+2018-03-29 10:48:24 INFO  TestGenericDAO:117 - Cadastrado com sucesso
+2018-03-29 10:48:36 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 10:48:36 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 10:48:36 DEBUG TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-29 10:48:36 DEBUG TestGenericDAO:75 - 'sequence.txt' encontrado
+2018-03-29 10:48:36 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 10:48:36 INFO  TestGenericDAO:90 - Cadastrando...
+2018-03-29 10:48:36 INFO  TestGenericDAO:116 - Cadastrado com sucesso
+2018-03-29 10:50:23 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 10:50:23 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 10:50:23 DEBUG TestGenericDAO:59 - Buscando arquivo 'sequence.txt'
+2018-03-29 10:50:23 DEBUG TestGenericDAO:76 - 'sequence.txt' encontrado
+2018-03-29 10:50:23 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 10:50:23 INFO  TestGenericDAO:91 - Cadastrando...
+2018-03-29 10:50:23 INFO  TestGenericDAO:117 - Cadastrado com sucesso
+2018-03-29 11:01:55 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:01:55 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-29 11:01:55 DEBUG TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:01:55 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-29 11:01:55 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-29 11:01:55 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:03:38 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:03:38 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-29 11:03:44 DEBUG TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:03:50 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-29 11:04:06 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-29 11:04:06 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:04:17 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:04:17 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-29 11:04:25 DEBUG TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:05:03 ERROR Excecao:28 - Erro ao criar diretório de arquivos
+2018-03-29 11:05:03 ERROR TestGenericDAO:30 - Erro ao iniciar teste
+2018-03-29 11:05:03 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:05:36 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:05:36 INFO  TestGenericDAO:44 - Iniciando operação
+2018-03-29 11:05:36 DEBUG TestGenericDAO:58 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:05:36 DEBUG TestGenericDAO:73 - 'sequence.txt' encontrado
+2018-03-29 11:05:36 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:05:36 INFO  TestGenericDAO:88 - Cadastrando...
+2018-03-29 11:05:36 INFO  TestGenericDAO:114 - Cadastrado com sucesso
+2018-03-29 11:11:58 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:11:58 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:11:58 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:11:58 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:11:58 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:11:58 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:11:58 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:14:07 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:14:07 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:14:07 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:14:07 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:14:07 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:14:07 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:14:07 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:14:29 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:14:29 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:14:29 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:14:29 DEBUG TestGenericDAO:69 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:14:29 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:14:29 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:14:29 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:14:29 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:15:03 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:15:03 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:15:03 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:15:03 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:15:03 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:15:03 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:15:03 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:15:20 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:15:20 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:15:20 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:15:20 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:15:20 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:15:20 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:15:20 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:15:27 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:15:27 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:15:27 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:15:27 DEBUG TestGenericDAO:69 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:15:27 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:15:27 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:15:27 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:15:27 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:16:21 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:16:21 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:16:21 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:16:21 DEBUG TestGenericDAO:69 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:16:21 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:16:21 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:16:21 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:16:21 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:18:29 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:18:29 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:18:29 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:18:29 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:18:29 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:18:29 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:18:29 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:19:38 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:19:38 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:19:42 DEBUG TestGenericDAO:62 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:19:52 DEBUG TestGenericDAO:69 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:21:39 DEBUG TestGenericDAO:79 - 'sequence.txt' encontrado
+2018-03-29 11:21:39 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:21:39 INFO  TestGenericDAO:94 - Cadastrando...
+2018-03-29 11:23:44 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:42:07 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:42:07 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:42:07 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:42:07 DEBUG StreamingBean:77 - 'sequence.txt' encontrado
+2018-03-29 11:42:07 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:42:07 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:42:07 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:42:28 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:42:28 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:42:40 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:42:40 DEBUG StreamingBean:77 - 'sequence.txt' encontrado
+2018-03-29 11:42:44 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:42:44 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:42:44 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:42:47 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:42:47 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:43:27 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:44:01 DEBUG StreamingBean:77 - 'sequence.txt' encontrado
+2018-03-29 11:44:18 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:44:28 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:44:28 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:45:34 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:45:34 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:45:34 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:45:34 DEBUG StreamingBean:77 - 'sequence.txt' encontrado
+2018-03-29 11:45:34 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:45:34 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:45:34 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:52:28 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:52:28 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:52:28 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:52:28 DEBUG StreamingBean:73 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:52:28 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:52:28 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:52:28 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:52:28 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:52:42 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:52:42 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:52:42 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:52:42 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:52:42 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:52:42 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:52:42 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:52:47 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:52:47 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:52:47 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:52:47 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:52:47 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:52:47 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:52:47 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:52:56 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:52:56 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:53:04 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:53:04 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:53:13 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:53:25 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:53:25 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:53:47 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:53:47 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:53:47 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:53:47 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:53:48 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:53:51 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:54:36 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:54:38 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:54:38 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:54:38 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:54:38 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:54:38 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:54:40 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:54:45 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:56:31 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:56:31 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:56:31 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:56:37 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:56:37 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:56:39 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:56:40 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:56:55 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:56:55 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:56:55 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:57:01 DEBUG StreamingBean:73 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:57:18 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:57:28 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:57:28 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:57:28 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:58:01 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:58:01 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:58:01 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:58:05 DEBUG StreamingBean:73 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 11:58:48 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:58:48 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:58:49 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:58:49 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 11:58:59 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 11:58:59 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 11:58:59 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 11:58:59 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 11:58:59 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 11:59:06 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 11:59:19 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:00:07 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:00:07 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:00:07 DEBUG StreamingBean:69 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:00:07 DEBUG StreamingBean:73 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 12:01:37 DEBUG StreamingBean:80 - 'sequence.txt' encontrado
+2018-03-29 12:01:37 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:01:37 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:01:37 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:04:39 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:04:39 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:04:39 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:04:39 DEBUG StreamingBean:81 - 'sequence.txt' encontrado
+2018-03-29 12:04:39 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:04:39 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:04:39 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:05:11 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:05:11 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:05:11 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:05:11 DEBUG StreamingBean:81 - 'sequence.txt' encontrado
+2018-03-29 12:05:11 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:05:11 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:05:19 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:05:29 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:05:29 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:05:29 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:05:29 DEBUG StreamingBean:81 - 'sequence.txt' encontrado
+2018-03-29 12:05:29 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:05:29 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:05:29 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:05:41 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:05:41 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:05:41 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:05:41 DEBUG StreamingBean:72 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 12:05:41 DEBUG StreamingBean:81 - 'sequence.txt' encontrado
+2018-03-29 12:05:41 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:05:41 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:05:41 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:05:52 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:05:52 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:05:52 DEBUG StreamingBean:68 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:05:54 DEBUG StreamingBean:72 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 12:06:33 DEBUG StreamingBean:81 - 'sequence.txt' encontrado
+2018-03-29 12:06:33 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:06:33 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:06:33 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:08:47 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:08:47 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:08:47 DEBUG StreamingBean:64 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:08:47 DEBUG StreamingBean:68 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 12:08:47 DEBUG StreamingBean:78 - 'sequence.txt' encontrado
+2018-03-29 12:08:47 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:08:47 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:08:47 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:12:43 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:12:43 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:12:43 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:12:43 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:12:43 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:12:43 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:12:43 ERROR Excecao:28 - Erro ao cadastrar
+2018-03-29 12:12:51 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:12:51 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:12:51 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:12:51 DEBUG StreamingBean:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 12:12:51 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:12:51 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:12:51 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:12:51 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:12:57 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:12:57 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:12:57 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:12:57 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:12:57 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:12:57 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:12:57 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:13:24 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:13:24 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:13:24 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:13:24 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:13:24 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:13:24 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:13:24 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:13:33 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:13:33 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:13:33 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:13:33 DEBUG StreamingBean:54 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-29 12:13:33 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:13:33 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:13:33 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:13:33 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:13:38 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:13:38 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:13:38 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:13:38 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:13:38 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:13:38 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:13:38 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:14:11 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:14:11 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:14:11 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:14:11 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:14:11 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:14:11 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:14:11 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:14:24 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:14:24 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:14:24 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:14:24 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:14:24 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:14:24 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:14:24 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:14:38 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:14:38 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:14:38 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:14:38 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:14:38 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:14:38 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:14:38 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:17:54 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:17:54 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:17:54 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:17:54 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:17:54 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:17:54 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:17:54 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:17:59 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:17:59 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:17:59 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:17:59 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:17:59 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:17:59 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:17:59 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 12:18:03 DEBUG TestGenericDAO:25 - Instanciando DAO de teste
+2018-03-29 12:18:03 INFO  TestGenericDAO:48 - Iniciando operação
+2018-03-29 12:18:03 DEBUG StreamingBean:50 - Buscando arquivo 'sequence.txt'
+2018-03-29 12:18:03 DEBUG StreamingBean:64 - 'sequence.txt' encontrado
+2018-03-29 12:18:03 DEBUG TestGenericDAO:33 - DAO instanciado
+2018-03-29 12:18:03 INFO  TestGenericDAO:76 - Cadastrando...
+2018-03-29 12:18:03 INFO  TestGenericDAO:113 - Cadastrado com sucesso
