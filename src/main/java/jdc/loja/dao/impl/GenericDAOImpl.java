@@ -1,10 +1,7 @@
 package jdc.loja.dao.impl;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
@@ -15,10 +12,10 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jdc.loja.beans.StreamingBean;
 import jdc.loja.dao.GenericDAO;
 import jdc.loja.exception.Excecao;
 import jdc.loja.test.dao.TestGenericDAO;
+import jdc.loja.util.StreamingUtil;
 
 /**
  * Implementação do DAO Generico
@@ -36,7 +33,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	/**
 	 * Importante o streaming bean para gerenciar todas as instancias dos readers, streams e writers
 	 */
-	private StreamingBean stream;
+	private StreamingUtil stream;
 	
 	/**
 	 * Inicializando a classe com a pasta de destino da entidade em questão
@@ -59,7 +56,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 		String caminho = persistence + "sequence.txt";
 		try {
 			//Criando o streaming bean
-			stream = new StreamingBean(caminho);
+			stream = new StreamingUtil(caminho);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new Excecao("Erro ao criar diretório de arquivos");
@@ -71,6 +68,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	 * @see GenericDAOImpl
 	 * @param classe generica
 	 */
+	@SuppressWarnings("unchecked")
 	public void cadastrar(C bean) throws Excecao {
 		try {
 			log.info("Cadastrando...");

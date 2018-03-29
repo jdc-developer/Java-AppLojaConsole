@@ -1,4 +1,4 @@
-package jdc.loja.beans;
+package jdc.loja.util;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -12,13 +12,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Classe criada para gerenciar os streams, writers e readers do dao generico
+ * Classe criada para gerenciar os streams e readers do dao generico
  * @author Jorge Do Carmo
  *
  */
-public class StreamingBean {
+public class StreamingUtil {
 
-	private static final Logger log = LoggerFactory.getLogger(StreamingBean.class);
+	private static final Logger log = LoggerFactory.getLogger(StreamingUtil.class);
 	
 	private ObjectOutputStream output;
 	private FileReader reader;
@@ -43,7 +43,12 @@ public class StreamingBean {
 		this.buffReader = buffReader;
 	}
 	
-	public StreamingBean(String path) throws IOException {
+	/**
+	 * Método construtor verifica se existe o sequence e o cria caso não exista
+	 * @param path
+	 * @throws IOException
+	 */
+	public StreamingUtil(String path) throws IOException {
 		super();
 		
 		try {

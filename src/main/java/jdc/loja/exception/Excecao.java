@@ -10,10 +10,8 @@ import org.slf4j.LoggerFactory;
  */
 public class Excecao extends Exception{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -7257236006926906690L;
+	
 	private static final Logger log = LoggerFactory.getLogger(Excecao.class);
 	private String msg;
 	
