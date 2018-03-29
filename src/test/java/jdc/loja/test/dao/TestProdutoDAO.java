@@ -1,5 +1,6 @@
 package jdc.loja.test.dao;
 
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -15,9 +16,9 @@ import jdc.loja.exception.Excecao;
  * @author Jorge Do Carmo
  *
  */
-public class TestGenericDAO {
+public class TestProdutoDAO {
 
-	private static final Logger log = LoggerFactory.getLogger(TestGenericDAO.class);
+	private static final Logger log = LoggerFactory.getLogger(TestProdutoDAO.class);
 	private static ProdutoDAO dao;
 	
 	@BeforeClass
@@ -40,9 +41,11 @@ public class TestGenericDAO {
 			bean.setDescricao("ProdutoTeste");
 			bean.setPreco(15);
 			dao.cadastrar(bean);
+			
+			Assert.assertNotEquals(bean.getCodigo(), 0);
 		} catch (Excecao e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			Assert.fail();
 		}
 	}
 }

@@ -373,3 +373,10 @@
 2018-03-29 12:18:03 DEBUG TestGenericDAO:33 - DAO instanciado
 2018-03-29 12:18:03 INFO  TestGenericDAO:76 - Cadastrando...
 2018-03-29 12:18:03 INFO  TestGenericDAO:113 - Cadastrado com sucesso
+2018-03-29 17:36:27 DEBUG TestGenericDAO:26 - Instanciando DAO de teste
+2018-03-29 17:36:27 INFO  TestGenericDAO:45 - Iniciando operação
+2018-03-29 17:36:27 DEBUG StreamingUtil:55 - Buscando arquivo 'sequence.txt'
+2018-03-29 17:36:27 DEBUG StreamingUtil:69 - 'sequence.txt' encontrado
+2018-03-29 17:36:27 DEBUG TestGenericDAO:34 - DAO instanciado
+2018-03-29 17:36:27 INFO  TestGenericDAO:74 - Cadastrando...
+2018-03-29 17:36:27 INFO  TestGenericDAO:111 - Cadastrado com sucesso

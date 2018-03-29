@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import jdc.loja.dao.GenericDAO;
 import jdc.loja.exception.Excecao;
-import jdc.loja.test.dao.TestGenericDAO;
+import jdc.loja.test.dao.TestProdutoDAO;
 import jdc.loja.util.StreamingUtil;
 
 /**
@@ -28,7 +28,7 @@ import jdc.loja.util.StreamingUtil;
 public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 
 	private String persistence = System.getProperty("user.dir") + "\\app-resources\\";
-	private static final Logger log = LoggerFactory.getLogger(TestGenericDAO.class);
+	private static final Logger log = LoggerFactory.getLogger(TestProdutoDAO.class);
 	
 	/**
 	 * Importante o streaming bean para gerenciar todas as instancias dos readers, streams e writers
