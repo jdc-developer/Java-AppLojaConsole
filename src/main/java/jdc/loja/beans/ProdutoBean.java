@@ -33,9 +33,6 @@ public class ProdutoBean implements Serializable{
 	public void setPreco(float preco) {
 		this.preco = preco;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	public ProdutoBean(int codigo, String descricao, float preco) {
 		super();
 		this.codigo = codigo;

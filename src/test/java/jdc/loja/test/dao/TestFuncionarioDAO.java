@@ -7,27 +7,22 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jdc.loja.beans.ProdutoBean;
-import jdc.loja.dao.ProdutoDAO;
-import jdc.loja.dao.impl.ProdutoDAOImpl;
+import jdc.loja.beans.FuncionarioBean;
+import jdc.loja.dao.FuncionarioDAO;
+import jdc.loja.dao.impl.FuncionarioDAOImpl;
 import jdc.loja.exception.Excecao;
 
-/**
- * Classe para testar o GenericDAO
- * @author Jorge Do Carmo
- *
- */
-public class TestProdutoDAO {
+public class TestFuncionarioDAO {
 
-	private static final Logger log = LoggerFactory.getLogger(TestProdutoDAO.class);
-	private static ProdutoDAO dao;
+	private static final Logger log = LoggerFactory.getLogger(TestFuncionarioDAO.class);
+	private static FuncionarioDAO dao;
 	
 	@BeforeClass
 	public static void inicializar() {
 		log.debug("Instanciando DAO de teste");
 		
 		try {
-			dao = new ProdutoDAOImpl("produtos\\");
+			dao = new FuncionarioDAOImpl("funcionarios\\");
 		} catch (Excecao e) {
 			log.error("Erro ao iniciar teste");
 			e.printStackTrace();
@@ -35,11 +30,10 @@ public class TestProdutoDAO {
 		log.debug("DAO instanciado");
 	}
 	
-	public ProdutoBean cadastro() throws Excecao {
-		
-		ProdutoBean bean = new ProdutoBean();
-		bean.setDescricao("Salgadinho Cheetos");
-		bean.setPreco(5);
+	public FuncionarioBean cadastro() throws Excecao {
+		FuncionarioBean bean = new FuncionarioBean();
+		bean.setNome("Diego Costa");
+		bean.setSalario(1500);
 		dao.cadastrar(bean);
 		
 		return bean;
@@ -48,7 +42,7 @@ public class TestProdutoDAO {
 	@Test
 	public void cadastrar() {
 		try {
-			ProdutoBean bean = cadastro();
+			FuncionarioBean bean = cadastro();
 			
 			Assert.assertNotEquals(bean.getCodigo(), 0);
 		} catch (Excecao e) {
@@ -60,9 +54,9 @@ public class TestProdutoDAO {
 	@Test
 	public void buscar() {
 		try {
-			ProdutoBean bean = cadastro();
+			FuncionarioBean bean = cadastro();
 			
-			ProdutoBean busca = dao.buscar(bean.getCodigo());
+			FuncionarioBean busca = dao.buscar(bean.getCodigo());
 			
 			Assert.assertNotNull(busca.getCodigo());
 		} catch (Excecao e) {
@@ -70,11 +64,11 @@ public class TestProdutoDAO {
 			Assert.fail();
 		}
 	}
-
+	
 	@Test
 	public void deletar() {
 		try {
-			ProdutoBean bean = cadastro();
+			FuncionarioBean bean = cadastro();
 			
 			dao.deletar(bean.getCodigo());
 			
@@ -88,15 +82,15 @@ public class TestProdutoDAO {
 	@Test
 	public void editar() {
 		try {
-			ProdutoBean bean = cadastro();
+			FuncionarioBean bean = cadastro();
 			
-			bean.setDescricao("Salgadinho Fandangos");
-			bean.setPreco(6);
+			bean.setNome("João Augusto");
+			bean.setSalario(1400);
 			
 			dao.editar(bean);
 			
-			Assert.assertEquals("Salgadinho Fandangos", dao.buscar(bean.getCodigo()).getDescricao());
-		} catch(Excecao e) {
+			Assert.assertEquals("João Augusto", dao.buscar(bean.getCodigo()).getNome());
+		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
 		}
