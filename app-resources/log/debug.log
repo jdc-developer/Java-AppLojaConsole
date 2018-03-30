@@ -1,0 +1,318 @@
+2018-03-30 14:37:17 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 14:37:17 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 14:37:17 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 14:37:17 DEBUG StreamingUtil:72 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-30 14:37:17 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 14:37:17 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 14:37:17 INFO  TestProdutoDAO:78 - Cadastrando...
+2018-03-30 14:37:17 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 14:37:17 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 14:37:17 INFO  TestProdutoDAO:113 - Cadastrado com sucesso
+2018-03-30 14:37:17 INFO  TestProdutoDAO:120 - Buscando...
+2018-03-30 14:37:17 INFO  TestProdutoDAO:135 - Encontrado
+2018-03-30 14:37:17 INFO  TestProdutoDAO:78 - Cadastrando...
+2018-03-30 14:37:17 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 14:37:17 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 14:37:17 INFO  TestProdutoDAO:113 - Cadastrado com sucesso
+2018-03-30 14:37:17 INFO  TestProdutoDAO:78 - Cadastrando...
+2018-03-30 14:37:17 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 14:37:17 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 14:37:17 INFO  TestProdutoDAO:113 - Cadastrado com sucesso
+2018-03-30 14:37:17 INFO  TestProdutoDAO:141 - Deletando...
+2018-03-30 14:37:17 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 14:37:17 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 14:37:17 INFO  TestProdutoDAO:150 - Deletado
+2018-03-30 14:37:17 INFO  TestProdutoDAO:120 - Buscando...
+2018-03-30 14:37:17 WARN  TestProdutoDAO:127 - Não encontrado
+2018-03-30 14:37:17 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 14:37:17 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:01:11 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:01:11 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:01:11 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:01:11 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:01:11 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:01:11 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:11 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:11 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:11 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:11 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:01:11 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:01:11 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:11 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:11 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:11 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:11 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:01:11 ERROR Excecao:26 - Erro ao editar
+2018-03-30 15:01:11 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:11 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:11 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:11 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:11 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:11 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:11 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:11 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:11 INFO  TestProdutoDAO:134 - Deletando...
+2018-03-30 15:01:11 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:01:11 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:01:11 INFO  TestProdutoDAO:144 - Deletado com sucesso
+2018-03-30 15:01:11 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:01:11 WARN  TestProdutoDAO:120 - Não encontrado
+2018-03-30 15:01:11 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:01:11 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:01:35 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:01:35 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:01:35 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:01:35 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:01:35 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:01:35 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:35 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:35 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:35 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:35 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:01:35 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:01:35 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:35 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:35 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:35 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:39 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:01:45 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:01:45 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:01:45 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:01:45 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:01:45 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:01:45 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:45 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:45 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:45 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:45 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:01:45 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:01:45 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:01:45 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:01:45 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:01:45 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:01:52 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:04:48 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:04:48 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:04:48 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:04:48 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:04:48 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:04:48 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:04:48 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:04:48 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:04:48 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:04:48 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:04:48 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:04:48 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:04:48 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:04:48 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:04:48 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:04:48 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:04:48 ERROR Excecao:26 - Erro ao editar
+2018-03-30 15:04:48 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:04:48 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:04:48 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:04:48 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:04:48 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:04:48 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:04:48 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:04:48 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:04:48 INFO  TestProdutoDAO:134 - Deletando...
+2018-03-30 15:04:48 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:04:48 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:04:48 INFO  TestProdutoDAO:144 - Deletado com sucesso
+2018-03-30 15:04:48 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:04:48 WARN  TestProdutoDAO:120 - Não encontrado
+2018-03-30 15:04:48 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:04:48 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:05:34 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:05:34 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:05:34 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:05:34 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:05:34 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:05:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:05:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:05:34 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:05:34 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:05:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:05:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:05:34 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:05:34 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:05:34 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:05:34 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:05:34 DEBUG StreamingUtil:72 - Arquivo não encontrado, criando 'sequence.txt'
+2018-03-30 15:05:34 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:167 - Editado com sucesso
+2018-03-30 15:05:34 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:05:34 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:05:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:05:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:05:34 ERROR Excecao:26 - Erro ao cadastrar
+2018-03-30 15:05:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:05:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:05:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:05:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:05:34 INFO  TestProdutoDAO:134 - Deletando...
+2018-03-30 15:05:34 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:05:34 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:05:34 INFO  TestProdutoDAO:144 - Deletado com sucesso
+2018-03-30 15:05:34 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:05:34 WARN  TestProdutoDAO:120 - Não encontrado
+2018-03-30 15:05:34 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:05:34 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:05:44 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:05:44 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:05:44 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:05:44 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:05:44 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:05:44 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:05:44 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:05:44 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:05:44 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:05:44 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:05:44 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:05:44 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:05:44 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:05:44 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:05:44 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:05:48 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:05:53 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:05:53 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:06:16 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:06:16 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:06:16 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:06:16 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:06:16 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:06:16 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:06:16 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:06:16 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:06:16 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:06:16 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:06:16 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:06:16 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:06:16 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:06:16 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:06:16 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:06:18 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:06:21 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:06:21 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:06:26 INFO  TestProdutoDAO:166 - Editado com sucesso
+2018-03-30 15:06:26 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:06:26 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:06:26 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:06:26 ERROR Excecao:26 - Erro ao cadastrar
+2018-03-30 15:06:26 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:06:26 ERROR Excecao:26 - Erro ao cadastrar
+2018-03-30 15:06:26 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:06:26 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:07:02 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:07:02 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:07:02 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:07:02 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:07:02 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:07:02 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:07:02 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:07:02 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:07:02 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:07:02 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:07:02 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:07:02 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:07:02 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:07:02 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:07:02 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:07:04 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:07:04 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:07:04 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:07:04 INFO  TestProdutoDAO:166 - Editado com sucesso
+2018-03-30 15:07:04 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:07:04 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:07:04 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:07:04 ERROR Excecao:26 - Erro ao cadastrar
+2018-03-30 15:07:04 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:07:04 ERROR Excecao:26 - Erro ao cadastrar
+2018-03-30 15:07:04 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:07:04 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:09:33 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:09:34 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:09:34 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:09:34 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:09:34 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:09:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:09:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:09:34 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:09:34 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:09:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:09:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:09:34 INFO  TestProdutoDAO:150 - Editando
+2018-03-30 15:09:34 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:09:34 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:09:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:09:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:167 - Editado com sucesso
+2018-03-30 15:09:34 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:09:34 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:09:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:09:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:09:34 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:09:34 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:09:34 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:09:34 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:09:34 INFO  TestProdutoDAO:134 - Deletando...
+2018-03-30 15:09:34 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:09:34 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:09:34 INFO  TestProdutoDAO:144 - Deletado com sucesso
+2018-03-30 15:09:34 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:09:34 WARN  TestProdutoDAO:120 - Não encontrado
+2018-03-30 15:09:34 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:09:34 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:10:07 DEBUG TestProdutoDAO:27 - Instanciando DAO de teste
+2018-03-30 15:10:07 INFO  TestProdutoDAO:50 - Iniciando operação
+2018-03-30 15:10:07 DEBUG StreamingUtil:68 - Buscando arquivo 'sequence.txt'
+2018-03-30 15:10:07 DEBUG StreamingUtil:82 - 'sequence.txt' encontrado
+2018-03-30 15:10:07 DEBUG TestProdutoDAO:35 - DAO instanciado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:10:07 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:10:07 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:10:07 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:10:07 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:10:07 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:10:07 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:10:07 INFO  TestProdutoDAO:151 - Editando
+2018-03-30 15:10:07 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:10:07 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:10:07 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:10:07 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:168 - Editado com sucesso
+2018-03-30 15:10:07 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:10:07 INFO  TestProdutoDAO:128 - Encontrado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:10:07 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:10:07 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:10:07 INFO  TestProdutoDAO:77 - Cadastrando...
+2018-03-30 15:10:07 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:10:07 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:106 - Cadastrado com sucesso
+2018-03-30 15:10:07 INFO  TestProdutoDAO:134 - Deletando...
+2018-03-30 15:10:07 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:10:07 DEBUG StreamingUtil:103 - Streams fechados
+2018-03-30 15:10:07 DEBUG StreamingUtil:107 - Resetando Buffered Stream
+2018-03-30 15:10:07 DEBUG StreamingUtil:117 - Resetado
+2018-03-30 15:10:07 INFO  TestProdutoDAO:145 - Deletado com sucesso
+2018-03-30 15:10:07 INFO  TestProdutoDAO:113 - Buscando...
+2018-03-30 15:10:07 WARN  TestProdutoDAO:120 - Não encontrado
+2018-03-30 15:10:07 DEBUG StreamingUtil:89 - Fechando streams
+2018-03-30 15:10:07 DEBUG StreamingUtil:103 - Streams fechados

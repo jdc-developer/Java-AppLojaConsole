@@ -103,15 +103,17 @@ public class StreamingUtil {
 		log.debug("Streams fechados");
 	}
 	
-	public void resetBuff(String path) {
+	public void resetBuff(String path) throws Excecao {
+		log.debug("Resetando Buffered Stream");
 		try {
 			buffReader.close();
 			reader.close();
 			reader = new FileReader(path + "\\sequence.txt");
 			buffReader = new BufferedReader(reader);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			throw new Excecao("Erro ao resetar Buffered Stream");
 		}
+		log.debug("Resetado");
 	}
 }

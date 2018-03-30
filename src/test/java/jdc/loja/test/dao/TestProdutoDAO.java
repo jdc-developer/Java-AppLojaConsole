@@ -70,6 +70,37 @@ public class TestProdutoDAO {
 			Assert.fail();
 		}
 	}
+
+	@Test
+	public void deletar() {
+		try {
+			ProdutoBean bean = cadastro();
+			
+			dao.deletar(bean.getCodigo());
+			
+			Assert.assertNull(dao.buscar(bean.getCodigo()));
+		} catch (Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void editar() {
+		try {
+			ProdutoBean bean = cadastro();
+			
+			bean.setDescricao("Teste edição");
+			bean.setPreco(85);
+			
+			dao.editar(bean);
+			
+			Assert.assertEquals("Teste edição", dao.buscar(bean.getCodigo()).getDescricao());
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
 	
 	@AfterClass
 	public static void destroy() {

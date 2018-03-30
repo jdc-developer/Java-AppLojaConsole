@@ -2,6 +2,7 @@ package jdc.loja.dao.impl;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
@@ -9,6 +10,9 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -68,7 +72,6 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	 * @see GenericDAOImpl
 	 * @param classe generica
 	 */
-	@SuppressWarnings("unchecked")
 	public void cadastrar(C bean) throws Excecao {
 		try {
 			log.info("Cadastrando...");
@@ -82,13 +85,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 			String path = persistence + beanAmigavel + sequence;
 			stream.setOutput(new ObjectOutputStream(new FileOutputStream(path)));
 			
-			//Buscar o metodo setCodigo da classe genérica
-			Class<C> classe = 
-					(Class<C>) ((ParameterizedType)
-							getClass().getGenericSuperclass())
-								.getActualTypeArguments()[0];
-			
-			Method metodo = classe.getMethod("setCodigo", int.class);
+			Method metodo = getBeanMethod("setCodigo", int.class);
 			
 			//Invocando o método setando chave primária
 			int id = Integer.parseInt(sequence);
@@ -115,44 +112,92 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 		try {
 			log.info("Buscando...");
 			
-			//Buscando string de bean amigavel
-			String beanName = persistence;
-			int ind = beanName.lastIndexOf("\\");
-			if( ind>=0 ) {
-			    beanName = new StringBuilder(beanName).replace(ind, ind+1,"").toString();
-			    beanName = beanName.substring(beanName.lastIndexOf("\\") + 1, beanName.length()); 
-			}
-			int ind2 = beanName.lastIndexOf("s");
-			if( ind2>=0 ) {
-			    beanName = new StringBuilder(beanName).replace(ind2, ind2+1,"").toString();
-			}
-			beanName = Character.toUpperCase(beanName.charAt(0)) + beanName.substring(1);
-			
-			String path = persistence + beanName + "Bean" + codigo;
+			String path = getPath(codigo);
 			stream.setInput(new ObjectInputStream(new FileInputStream(path)));
 			bean = (C) stream.getInput().readObject();
+			
+		} catch (FileNotFoundException e1) {
+			log.warn("Não encontrado");
+			return null;
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 			throw new Excecao("Erro ao realizar busca");
-		}
-		
-		if(bean == null) {
-			throw new Excecao("Não encontrado");
-		}
+		} 
 		
 		log.info("Encontrado");
 		return bean;
 	}
 
 	public void deletar(K codigo) throws Excecao {
-		// TODO Auto-generated method stub
-		
+		try {
+			log.info("Deletando...");
+			
+			String path = getPath(codigo);
+			stream.destroy();
+			Path caminho = Paths.get(path);
+			Files.delete(caminho);
+			
+			stream.resetBuff(persistence);
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw new Excecao("Erro ao deletar");
+		}
+		log.info("Deletado com sucesso");
 	}
 
+	@SuppressWarnings("unchecked")
 	public void editar(C bean) throws Excecao {
-		// TODO Auto-generated method stub
+		try {
+			log.info("Editando");
+			
+			Method metodo = getBeanMethod("getCodigo", null);
+			K codigo = (K) metodo.invoke(bean);
+			String path = getPath(codigo);
+			
+			stream.destroy();
+			Path caminho = Paths.get(path);
+			Files.delete(caminho);
+			
+			stream.setOutput(new ObjectOutputStream(new FileOutputStream(path)));
+			stream.getOutput().writeObject(bean);
+			stream.resetBuff(persistence);
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw new Excecao("Erro ao editar");
+		}
+		log.info("Editado com sucesso");
+	}
+	
+	public String getPath(K codigo) {
+		//Buscando string de bean amigavel
+		String beanName = persistence;
+		int ind = beanName.lastIndexOf("\\");
+		if( ind>=0 ) {
+		    beanName = new StringBuilder(beanName).replace(ind, ind+1,"").toString();
+		    beanName = beanName.substring(beanName.lastIndexOf("\\") + 1, beanName.length()); 
+		}
+		int ind2 = beanName.lastIndexOf("s");
+		if( ind2>=0 ) {
+		    beanName = new StringBuilder(beanName).replace(ind2, ind2+1,"").toString();
+		}
+		beanName =  Character.toUpperCase(beanName.charAt(0)) + beanName.substring(1);
 		
+		return persistence + beanName + "Bean" + codigo;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Method getBeanMethod(String metodo, Class type) throws Exception {
+		//Buscar o metodo setCodigo da classe genérica
+		Class<C> classe = 
+				(Class<C>) ((ParameterizedType)
+						getClass().getGenericSuperclass())
+							.getActualTypeArguments()[0];
+		
+		if(type == null) {
+			return classe.getMethod(metodo);
+		}
+		return classe.getMethod(metodo, type);
 	}
 	
 	public void closeStream() {
