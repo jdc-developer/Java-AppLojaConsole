@@ -1,5 +1,7 @@
 package jdc.loja.dao.impl;
 
+import java.util.List;
+
 import jdc.loja.beans.ProdutoBean;
 import jdc.loja.dao.ProdutoDAO;
 import jdc.loja.exception.Excecao;

@@ -5,11 +5,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import jdc.loja.exception.Excecao;
 
 /**
  * Classe criada para gerenciar os streams e readers do dao generico
@@ -23,7 +26,17 @@ public class StreamingUtil {
 	private ObjectOutputStream output;
 	private FileReader reader;
 	private BufferedReader buffReader;
+	private ObjectInputStream input;
 	
+	public static Logger getLog() {
+		return log;
+	}
+	public ObjectInputStream getInput() {
+		return input;
+	}
+	public void setInput(ObjectInputStream input) {
+		this.input = input;
+	}
 	public ObjectOutputStream getOutput() {
 		return output;
 	}
@@ -69,6 +82,36 @@ public class StreamingUtil {
 			log.debug("'sequence.txt' encontrado");
 			
 			buffReader = new BufferedReader(reader);
+		}
+	}
+	
+	public void destroy() throws Excecao {
+		log.debug("Fechando streams");
+		try {
+			buffReader.close();
+			reader.close();
+			if(output != null) {
+				output.close();
+			}
+			if(input != null) {
+				input.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new Excecao("Erro ao fechar Streams");
+		}
+		log.debug("Streams fechados");
+	}
+	
+	public void resetBuff(String path) {
+		try {
+			buffReader.close();
+			reader.close();
+			reader = new FileReader(path + "\\sequence.txt");
+			buffReader = new BufferedReader(reader);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

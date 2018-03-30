@@ -1,5 +1,6 @@
 package jdc.loja.test.dao;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -34,18 +35,44 @@ public class TestProdutoDAO {
 		log.debug("DAO instanciado");
 	}
 	
+	public ProdutoBean cadastro() throws Excecao {
+		
+		ProdutoBean bean = new ProdutoBean();
+		bean.setDescricao("ProdutoTeste");
+		bean.setPreco(15);
+		dao.cadastrar(bean);
+		
+		return bean;
+	}
+	
 	@Test
 	public void cadastrar() {
 		try {
-			ProdutoBean bean = new ProdutoBean();
-			bean.setDescricao("ProdutoTeste");
-			bean.setPreco(15);
-			dao.cadastrar(bean);
+			ProdutoBean bean = cadastro();
 			
 			Assert.assertNotEquals(bean.getCodigo(), 0);
 		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
 		}
+	}
+	
+	@Test
+	public void buscar() {
+		try {
+			ProdutoBean bean = cadastro();
+			
+			ProdutoBean busca = dao.buscar(bean.getCodigo());
+			
+			Assert.assertNotNull(busca.getCodigo());
+		} catch (Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@AfterClass
+	public static void destroy() {
+		dao.closeStream();
 	}
 }

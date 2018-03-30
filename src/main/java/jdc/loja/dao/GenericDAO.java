@@ -16,8 +16,8 @@ import jdc.loja.exception.Excecao;
 public interface GenericDAO<C, K> {
 
 	void cadastrar(C bean) throws Excecao;
-	List<C> listar() throws Excecao;
 	C buscar(K codigo) throws Excecao;
 	void deletar(K codigo) throws Excecao;
 	void editar(C bean) throws Excecao;
+	void closeStream();
 }
