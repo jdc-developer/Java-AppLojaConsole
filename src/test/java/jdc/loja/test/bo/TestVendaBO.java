@@ -1,4 +1,4 @@
-package jdc.loja.test.dao;
+package jdc.loja.test.bo;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -7,55 +7,26 @@ import java.util.List;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import jdc.loja.beans.FuncionarioBean;
 import jdc.loja.beans.ItemVendaBean;
 import jdc.loja.beans.ProdutoBean;
 import jdc.loja.beans.VendaBean;
-import jdc.loja.dao.FuncionarioDAO;
-import jdc.loja.dao.ItemVendaDAO;
-import jdc.loja.dao.ProdutoDAO;
-import jdc.loja.dao.VendaDAO;
-import jdc.loja.dao.impl.FuncionarioDAOImpl;
-import jdc.loja.dao.impl.ItemVendaDAOImpl;
-import jdc.loja.dao.impl.ProdutoDAOImpl;
-import jdc.loja.dao.impl.VendaDAOImpl;
+import jdc.loja.bo.FuncionarioBO;
+import jdc.loja.bo.ItemVendaBO;
+import jdc.loja.bo.ProdutoBO;
+import jdc.loja.bo.VendaBO;
 import jdc.loja.exception.Excecao;
 
-public class TestVendaDAO {
-	
-	private static final Logger log = LoggerFactory.getLogger(TestVendaDAO.class);
-	private static ItemVendaDAO dao;
-	private static ProdutoDAO daoProd;
-	private static VendaDAO daoVenda;
-	private static FuncionarioDAO daoFunc;
-	
-	@BeforeClass
-	public static void inicializar() {
-		log.debug("Instanciando DAO de teste");
-		
-		try {
-			dao = new ItemVendaDAOImpl("itemvendas\\");
-			daoProd = new ProdutoDAOImpl("produtos\\");
-			daoVenda = new VendaDAOImpl("vendas\\");
-			daoFunc = new FuncionarioDAOImpl("funcionarios\\");
-		} catch (Excecao e) {
-			log.error("Erro ao iniciar teste");
-			e.printStackTrace();
-		}
-		log.debug("DAO instanciado");
-	}
+public class TestVendaBO {
 	
 	@AfterClass
 	public static void destroy() {
-		dao.closeStream();
-		daoProd.closeStream();
-		daoVenda.closeStream();
-		daoFunc.closeStream();
+		VendaBO.destroy();
+		ProdutoBO.destroy();
+		FuncionarioBO.destroy();
+		ItemVendaBO.destroy();
 	}
 
 	public ItemVendaBean cadastro() throws Excecao {
@@ -68,7 +39,7 @@ public class TestVendaDAO {
 		itens.add(bean);
 		bean.setVenda(cadastroVenda(itens));
 		
-		dao.cadastrar(bean);
+		ItemVendaBO.cadastrar(bean);
 		
 		return bean;
 	}
@@ -78,7 +49,7 @@ public class TestVendaDAO {
 		bean.setDescricao("Chocolate Suflair");
 		bean.setPreco(3);
 		
-		daoProd.cadastrar(bean);
+		ProdutoBO.cadastrar(bean);
 		
 		return bean;
 	}
@@ -97,7 +68,7 @@ public class TestVendaDAO {
 		
 		bean.setValor(valor);
 		
-		daoVenda.cadastrar(bean);
+		VendaBO.cadastrar(bean);
 		
 		return bean;
 	}
@@ -107,7 +78,7 @@ public class TestVendaDAO {
 		bean.setNome("Gustavo Rocha");
 		bean.setSalario(2000);
 		
-		daoFunc.cadastrar(bean);
+		FuncionarioBO.cadastrar(bean);
 		
 		return bean;
 	}
@@ -119,7 +90,7 @@ public class TestVendaDAO {
 			itens.add(cadastro());
 			VendaBean bean = cadastroVenda(itens);
 			
-			daoVenda.cadastrar(bean);
+			VendaBO.cadastrar(bean);
 			
 			Assert.assertNotEquals(bean.getCodigo(), 0);
 		} catch (Excecao e) {
@@ -135,7 +106,7 @@ public class TestVendaDAO {
 			itens.add(cadastro());
 			VendaBean bean = cadastroVenda(itens);
 			
-			VendaBean busca = daoVenda.buscar(bean.getCodigo());
+			VendaBean busca = VendaBO.buscar(bean.getCodigo());
 			
 			Assert.assertNotNull(busca.getCodigo());
 		} catch (Excecao e) {
@@ -151,9 +122,9 @@ public class TestVendaDAO {
 			itens.add(cadastro());
 			VendaBean bean = cadastroVenda(itens);
 			
-			daoVenda.deletar(bean.getCodigo());
+			VendaBO.deletar(bean.getCodigo());
 			
-			Assert.assertNull(daoVenda.buscar(bean.getCodigo()));
+			Assert.assertNull(VendaBO.buscar(bean.getCodigo()));
 		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -171,9 +142,9 @@ public class TestVendaDAO {
 			
 			bean.setDataVenda(data);
 			
-			daoVenda.editar(bean);
+			VendaBO.editar(bean);
 			
-			Assert.assertEquals(data, daoVenda.buscar(bean.getCodigo()).getDataVenda());
+			Assert.assertEquals(data, VendaBO.buscar(bean.getCodigo()).getDataVenda());
 		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

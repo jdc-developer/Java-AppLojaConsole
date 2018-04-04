@@ -1,45 +1,25 @@
-package jdc.loja.test.dao;
+package jdc.loja.test.bo;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import jdc.loja.beans.FuncionarioBean;
-import jdc.loja.dao.FuncionarioDAO;
-import jdc.loja.dao.impl.FuncionarioDAOImpl;
+import jdc.loja.bo.FuncionarioBO;
 import jdc.loja.exception.Excecao;
 
-public class TestFuncionarioDAO {
-
-	private static final Logger log = LoggerFactory.getLogger(TestFuncionarioDAO.class);
-	private static FuncionarioDAO dao;
-	
-	@BeforeClass
-	public static void inicializar() {
-		log.debug("Instanciando DAO de teste");
-		
-		try {
-			dao = new FuncionarioDAOImpl("funcionarios\\");
-		} catch (Excecao e) {
-			log.error("Erro ao iniciar teste");
-			e.printStackTrace();
-		}
-		log.debug("DAO instanciado");
-	}
+public class TestFuncionarioBO {
 	
 	@AfterClass
 	public static void destroy() {
-		dao.closeStream();
+		FuncionarioBO.destroy();
 	}
 	
 	public FuncionarioBean cadastro() throws Excecao {
 		FuncionarioBean bean = new FuncionarioBean();
 		bean.setNome("Diego Costa");
 		bean.setSalario(1500);
-		dao.cadastrar(bean);
+		FuncionarioBO.cadastrar(bean);
 		
 		return bean;
 	}
@@ -61,7 +41,7 @@ public class TestFuncionarioDAO {
 		try {
 			FuncionarioBean bean = cadastro();
 			
-			FuncionarioBean busca = dao.buscar(bean.getCodigo());
+			FuncionarioBean busca = FuncionarioBO.buscar(bean.getCodigo());
 			
 			Assert.assertNotNull(busca.getCodigo());
 		} catch (Excecao e) {
@@ -75,9 +55,9 @@ public class TestFuncionarioDAO {
 		try {
 			FuncionarioBean bean = cadastro();
 			
-			dao.deletar(bean.getCodigo());
+			FuncionarioBO.deletar(bean.getCodigo());
 			
-			Assert.assertNull(dao.buscar(bean.getCodigo()));
+			Assert.assertNull(FuncionarioBO.buscar(bean.getCodigo()));
 		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -92,9 +72,9 @@ public class TestFuncionarioDAO {
 			bean.setNome("João Augusto");
 			bean.setSalario(1400);
 			
-			dao.editar(bean);
+			FuncionarioBO.editar(bean);
 			
-			Assert.assertEquals("João Augusto", dao.buscar(bean.getCodigo()).getNome());
+			Assert.assertEquals("João Augusto", FuncionarioBO.buscar(bean.getCodigo()).getNome());
 		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

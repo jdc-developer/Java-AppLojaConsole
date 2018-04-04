@@ -2,8 +2,6 @@ package jdc.loja.bo;
 
 import java.util.Calendar;
 
-import org.junit.BeforeClass;
-
 import jdc.loja.beans.ItemVendaBean;
 import jdc.loja.beans.VendaBean;
 import jdc.loja.dao.VendaDAO;
@@ -15,21 +13,27 @@ import jdc.loja.exception.Excecao;
  * @author Jorge Do Carmo
  *
  */
-public class VendaBO {
+public abstract class VendaBO {
 
 	private static VendaDAO dao;
 	
-	@BeforeClass
-	public void inicializar() {
-		try {
-			dao = new VendaDAOImpl("vendas\\");
-		} catch (Excecao e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	public static VendaDAO getInstance(){
+		if (dao == null){
+			try {
+				dao = new VendaDAOImpl("vendas\\");
+			} catch (Excecao e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		return dao;
 	}
 	
-	public void cadastrar(VendaBean bean) throws Excecao {
+	public static void destroy() {
+		getInstance().closeStream();
+	}
+	
+	public static void cadastrar(VendaBean bean) throws Excecao {
 		if(bean.getFuncionario() == null) {
 			throw new Excecao("Funcionário obrigatório");
 		}
@@ -50,21 +54,21 @@ public class VendaBO {
 		bean.setValor(valor);
 		
 		bean.setDataVenda(Calendar.getInstance());
-		dao.cadastrar(bean);
+		getInstance().cadastrar(bean);
 	}
 	
 	public static VendaBean buscar(int codigo) throws Excecao {
 		if(codigo == 0) {
 			throw new Excecao("Código inválido");
 		}
-		return dao.buscar(codigo);
+		return getInstance().buscar(codigo);
 	}
 	
 	public static void deletar(int codigo) throws Excecao {
 		if(codigo == 0) {
 			throw new Excecao("Código inválido");
 		}
-		dao.deletar(codigo);
+		getInstance().deletar(codigo);
 	}
 	
 	public static void editar(VendaBean bean) throws Excecao {
@@ -88,6 +92,6 @@ public class VendaBO {
 		}
 		
 		bean.setValor(valor);
-		dao.editar(bean);
+		getInstance().editar(bean);
 	}
 }

@@ -1,7 +1,5 @@
 package jdc.loja.bo;
 
-import org.junit.BeforeClass;
-
 import jdc.loja.beans.ProdutoBean;
 import jdc.loja.dao.ProdutoDAO;
 import jdc.loja.dao.impl.ProdutoDAOImpl;
@@ -12,18 +10,24 @@ import jdc.loja.exception.Excecao;
  * @author Jorge Do Carmo
  *
  */
-public class ProdutoBO {
+public abstract class ProdutoBO {
 	
 	private static ProdutoDAO dao;
 	
-	@BeforeClass
-	public void inicializar() {
-		try {
-			dao = new ProdutoDAOImpl("produtos\\");
-		} catch (Excecao e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	public static ProdutoDAO getInstance(){
+		if (dao == null){
+			try {
+				dao = new ProdutoDAOImpl("produtos\\");
+			} catch (Excecao e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		return dao;
+	}
+	
+	public static void destroy() {
+		getInstance().closeStream();
 	}
 	
 	public static void cadastrar(ProdutoBean bean) throws Excecao {
@@ -39,21 +43,21 @@ public class ProdutoBO {
 		if(bean.getDescricao().length() > 200) {
 			throw new Excecao("Descrição não pode exceder o limite de 200 carácteres");
 		}
-		dao.cadastrar(bean);
+		getInstance().cadastrar(bean);
 	}
 	
 	public static ProdutoBean buscar(int codigo) throws Excecao {
 		if(codigo == 0) {
 			throw new Excecao("Código inválido");
 		}
-		return dao.buscar(codigo);
+		return getInstance().buscar(codigo);
 	}
 	
 	public static void deletar(int codigo) throws Excecao {
 		if(codigo == 0) {
 			throw new Excecao("Código inválido");
 		}
-		dao.deletar(codigo);
+		getInstance().deletar(codigo);
 	}
 	
 	public static void editar(ProdutoBean bean) throws Excecao {
@@ -72,7 +76,7 @@ public class ProdutoBO {
 		if(bean.getDescricao().length() > 200) {
 			throw new Excecao("Descrição não pode exceder o limite de 200 carácteres");
 		}
-		dao.editar(bean);
+		getInstance().editar(bean);
 	}
 
 }
