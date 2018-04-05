@@ -1,5 +1,7 @@
 package jdc.loja.dao;
 
+import java.util.List;
+
 import jdc.loja.dao.impl.GenericDAOImpl;
 import jdc.loja.exception.Excecao;
 
@@ -17,5 +19,6 @@ public interface GenericDAO<C, K> {
 	C buscar(K codigo) throws Excecao;
 	void deletar(K codigo) throws Excecao;
 	void editar(C bean) throws Excecao;
+	long count() throws Excecao;
 	void closeStream();
 }

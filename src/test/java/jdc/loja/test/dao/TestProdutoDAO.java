@@ -106,4 +106,14 @@ public class TestProdutoDAO {
 			Assert.fail();
 		}
 	}
+	
+	@Test
+	public void count() {
+		try {
+			long count = dao.count();
+			System.out.println(count);
+		} catch(Excecao e) {
+			
+		}
+	}
 }

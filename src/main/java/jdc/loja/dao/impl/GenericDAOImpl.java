@@ -5,11 +5,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -34,6 +36,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 
 	private String persistence = System.getProperty("user.dir") + "\\app-resources\\";
 	private static final Logger log = LoggerFactory.getLogger(TestProdutoDAO.class);
+	private static int MAX_FILES = 10000;
 	
 	/**
 	 * Importante o stream para gerenciar todas as instancias dos readers, streams e writers
@@ -198,6 +201,34 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 			return classe.getMethod(metodo);
 		}
 		return classe.getMethod(metodo, type);
+	}
+	
+	/**
+	 * Método para contar o total de determinados arquivos / beans
+	 */
+	public long count() throws Excecao{
+		
+		log.debug("Contando arquivos...");
+		
+		Path dir = Paths.get(persistence);
+	    int i = 0;
+
+	    try {
+	    	DirectoryStream<Path> str = Files.newDirectoryStream(dir);
+	        for (Path p : str) {
+	            if(!p.endsWith(Paths.get("sequence.txt"))) {
+	            	i++;
+	            }
+	            if (i > MAX_FILES) {
+	                return MAX_FILES;
+	            }
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        throw new Excecao("Erro ao contar arquivos");
+	    }
+	    log.debug("Sucesso");
+		return i;
 	}
 	
 	public void closeStream() {
