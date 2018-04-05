@@ -1,6 +1,6 @@
 package jdc.loja.view;
 
-import java.util.InputMismatchException;
+import java.lang.reflect.Method;
 import java.util.Scanner;
 
 import org.slf4j.Logger;
@@ -18,6 +18,10 @@ public class ConsoleView {
 	private static final Logger log = LoggerFactory.getLogger(ConsoleView.class);
 	private static Scanner entrada;
 
+	/**
+	 * O main apresenta a aplicação e chama a primeira ação. Todo o fluxo está dividido em ações para possibilitar redirecionamento
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		entrada = new Scanner(System.in);
 		log.info("Iniciando aplicação\n");
@@ -26,31 +30,64 @@ public class ConsoleView {
 		System.out.println("------------------------ Desenvolvido por Jorge Do Carmo -------------------------");
 		System.out.println("----------------------------- Versão 1.0 / 2018 ----------------------------------");
 		
-		acao1();
+		callAction(0);
 	}
 	
-	public static void acao1() {
+	public static void acao0() {
 		System.out.println("\nDIGITE O CARACTERE CORRESPONDENTE À OPÇÃO DESEJADA:\n\n"
 				+ "1. Cadastrar Produto\n"
 				+ "2. Cadastrar Funcionario\n"
 				+ "3. Realizar Venda");
 		int[] validos = new int[] {1, 2, 3};
+		int comando = 0;
+		
 		try {
-			int comando = comando(validos);
-		} catch (Exception e) {
-			int i = 1;
-			while(entrada.hasNext()) {
-				System.out.println(i);
-				i++;
-			}
-			acao1();
+			comando = comando(validos);
+		} catch (Excecao e) {
+			callAction(0);
 		}
+		callAction(comando);
 	}
 	
-	public static int comando(int[] validos) throws Exception {
-		int comando = 0;
+	public static void acao1() {
+		System.out.println("--------------------------- PRODUTOS ---------------------------");
+	}
+	
+	/**
+	 * Método genérico para chamar outro método de acordo com o comando enviado
+	 * @param action
+	 */
+	public static void callAction(int action) {
+		try {
+			Class<?> classe = Class.forName("jdc.loja.view.ConsoleView");
+			Method metodo = classe.getMethod("acao" + action);
+			metodo.invoke(classe);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	/**
+	 * Método genérico para receber comandos e validá-los de acordo com o tipo de dado e as opções válidas
+	 * @param validos
+	 * @return valor do comando
+	 * @throws Excecao
+	 */
+	public static int comando(int[] validos) throws Excecao {
 		boolean valido = false;
-		comando = entrada.nextInt();
+		String input = entrada.nextLine();
+		StringBuilder processedChars = new StringBuilder();
+		
+		for(int i=0 ; i<input.length() ; i++){
+		    char c = input.charAt(i);
+		    if(!Character.isDigit(c)){
+		    	throw new Excecao("Comando inválido, digite novamente");
+		    }else{
+		        processedChars.append(c);
+		    }
+		}
+		
+		int comando = Integer.parseInt(processedChars.toString());
 		
 		for(int i = 0; i < validos.length; i++) {
 			if(i == comando) {
@@ -62,7 +99,7 @@ public class ConsoleView {
 			return comando;
 		}
 		else {
-			throw new Excecao("Comando inválido");
+			throw new Excecao("Comando inválido, digite novamente");
 		}
 	}
 }
