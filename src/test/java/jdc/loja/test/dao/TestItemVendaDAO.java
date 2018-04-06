@@ -166,4 +166,15 @@ public class TestItemVendaDAO {
 			Assert.fail();
 		}
 	}
+	
+	@Test
+	public void count() {
+		try {
+			long count = dao.count();
+			Assert.assertNotEquals(count, 0);
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
 }

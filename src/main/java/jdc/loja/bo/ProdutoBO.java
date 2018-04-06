@@ -78,5 +78,15 @@ public abstract class ProdutoBO {
 		}
 		getInstance().editar(bean);
 	}
+	
+	public static long count(){
+		long count = 0;
+		try {
+			count = getInstance().count();
+		} catch (Excecao e) {
+			e.printStackTrace();
+		}
+		return count;
+	}
 
 }

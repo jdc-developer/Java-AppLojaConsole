@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
@@ -15,13 +14,16 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import jdc.loja.dao.GenericDAO;
 import jdc.loja.exception.Excecao;
-import jdc.loja.test.dao.TestProdutoDAO;
 import jdc.loja.util.StreamingUtil;
 
 /**
@@ -35,7 +37,7 @@ import jdc.loja.util.StreamingUtil;
 public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 
 	private String persistence = System.getProperty("user.dir") + "\\app-resources\\";
-	private static final Logger log = LoggerFactory.getLogger(TestProdutoDAO.class);
+	private static final Logger log = LoggerFactory.getLogger(GenericDAOImpl.class);
 	private static int MAX_FILES = 10000;
 	
 	/**
@@ -50,7 +52,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	 * @throws Excecao
 	 */
 	public GenericDAOImpl(String pasta) throws Excecao {
-		log.info("Iniciando operação");
+		log.debug("Iniciando operação");
 		
 		persistence += pasta;
 		
@@ -172,40 +174,6 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 		log.info("Editado com sucesso");
 	}
 	
-	public String getPath(K codigo) {
-		//Buscando string de bean amigavel
-		String beanName = persistence;
-		int ind = beanName.lastIndexOf("\\");
-		if( ind>=0 ) {
-		    beanName = new StringBuilder(beanName).replace(ind, ind+1,"").toString();
-		    beanName = beanName.substring(beanName.lastIndexOf("\\") + 1, beanName.length()); 
-		}
-		int ind2 = beanName.lastIndexOf("s");
-		if( ind2>=0 ) {
-		    beanName = new StringBuilder(beanName).replace(ind2, ind2+1,"").toString();
-		}
-		beanName =  Character.toUpperCase(beanName.charAt(0)) + beanName.substring(1);
-		
-		return persistence + beanName + "Bean" + codigo;
-	}
-	
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public Method getBeanMethod(String metodo, Class type) throws Exception {
-		//Buscar o metodo setCodigo da classe genérica
-		Class<C> classe = 
-				(Class<C>) ((ParameterizedType)
-						getClass().getGenericSuperclass())
-							.getActualTypeArguments()[0];
-		
-		if(type == null) {
-			return classe.getMethod(metodo);
-		}
-		return classe.getMethod(metodo, type);
-	}
-	
-	/**
-	 * Método para contar o total de determinados arquivos / beans
-	 */
 	public long count() throws Excecao{
 		
 		log.debug("Contando arquivos...");
@@ -229,6 +197,94 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	    }
 	    log.debug("Sucesso");
 		return i;
+	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public List<C> listar(Integer pagina) throws Excecao {
+		log.info("Listando...");
+	    
+	    List<C> lista = new ArrayList<C>();
+	    pagina = pagina * 10;
+
+	    try {
+	    	
+	    	File f = new File(persistence);
+	    	File [] files = f.listFiles();
+	    	Arrays.sort( files, new Comparator()
+	    	{
+	    	    public int compare(Object o1, Object o2) {
+
+	    	        if (((File)o1).lastModified() > ((File)o2).lastModified()) {
+	    	            return -1;
+	    	        } else if (((File)o1).lastModified() < ((File)o2).lastModified()) {
+	    	            return +1;
+	    	        } else {
+	    	            return 0;
+	    	        }
+	    	    }
+
+	    	}); 
+	    	
+	    	for(int i = 0; i < 10; i++) {
+	    		stream.setInput(new ObjectInputStream(new FileInputStream(files[pagina])));
+				C bean = (C) stream.getInput().readObject();
+				lista.add(bean);
+				
+				pagina++;
+	    	}
+	    	
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        throw new Excecao("Erro ao listar");
+	    }
+	    
+	    log.debug("Sucesso");
+		return lista;
+	}
+	
+	/**
+	 * Método para retornar caminho de um bean generico através do código (Util para busca e edição)
+	 * @param codigo
+	 * @return
+	 * @see buscar(), editar()
+	 */
+	public String getPath(K codigo) {
+		//Buscando string de bean amigavel
+		String beanName = persistence;
+		int ind = beanName.lastIndexOf("\\");
+		if( ind>=0 ) {
+		    beanName = new StringBuilder(beanName).replace(ind, ind+1,"").toString();
+		    beanName = beanName.substring(beanName.lastIndexOf("\\") + 1, beanName.length()); 
+		}
+		int ind2 = beanName.lastIndexOf("s");
+		if( ind2>=0 ) {
+		    beanName = new StringBuilder(beanName).replace(ind2, ind2+1,"").toString();
+		}
+		beanName =  Character.toUpperCase(beanName.charAt(0)) + beanName.substring(1);
+		
+		return persistence + beanName + "Bean" + codigo;
+	}
+	
+	/**
+	 * Método que retorna um método definido em uma classe genérica
+	 * @param metodo
+	 * @param type
+	 * @return objeto método
+	 * @throws Exception
+	 * @see cadastrar(), editar()
+	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public Method getBeanMethod(String metodo, Class type) throws Exception {
+		//Buscar o metodo setCodigo da classe genérica
+		Class<C> classe = 
+				(Class<C>) ((ParameterizedType)
+						getClass().getGenericSuperclass())
+							.getActualTypeArguments()[0];
+		
+		if(type == null) {
+			return classe.getMethod(metodo);
+		}
+		return classe.getMethod(metodo, type);
 	}
 	
 	public void closeStream() {

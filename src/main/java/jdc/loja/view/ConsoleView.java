@@ -6,6 +6,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jdc.loja.bo.ProdutoBO;
 import jdc.loja.exception.Excecao;
 
 /**
@@ -35,9 +36,9 @@ public class ConsoleView {
 	
 	public static void acao0() {
 		System.out.println("\nDIGITE O CARACTERE CORRESPONDENTE À OPÇÃO DESEJADA:\n\n"
-				+ "1. Cadastrar Produto\n"
-				+ "2. Cadastrar Funcionario\n"
-				+ "3. Realizar Venda");
+				+ "1. Produtos\n"
+				+ "2. Funcionários\n"
+				+ "3. Vendas");
 		int[] validos = new int[] {1, 2, 3};
 		int comando = 0;
 		
@@ -51,6 +52,7 @@ public class ConsoleView {
 	
 	public static void acao1() {
 		System.out.println("--------------------------- PRODUTOS ---------------------------");
+		System.out.println("------------------------ CADASTRADOS: " + ProdutoBO.count() + " ------------------------");
 	}
 	
 	/**

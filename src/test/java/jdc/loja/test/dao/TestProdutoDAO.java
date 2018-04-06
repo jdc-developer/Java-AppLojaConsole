@@ -1,5 +1,7 @@
 package jdc.loja.test.dao;
 
+import java.util.List;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -111,9 +113,24 @@ public class TestProdutoDAO {
 	public void count() {
 		try {
 			long count = dao.count();
-			System.out.println(count);
+			Assert.assertNotEquals(count, 0);
 		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void listar() {
+		try {
+			List<ProdutoBean> lista = dao.listar(0);
 			
+			for(ProdutoBean bean : lista) {
+				System.out.println(bean.getDescricao());
+			}
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
 		}
 	}
 }

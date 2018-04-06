@@ -20,5 +20,6 @@ public interface GenericDAO<C, K> {
 	void deletar(K codigo) throws Excecao;
 	void editar(C bean) throws Excecao;
 	long count() throws Excecao;
+	List<C> listar(Integer pagina) throws Excecao;
 	void closeStream();
 }

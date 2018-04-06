@@ -28,9 +28,6 @@ public class StreamingUtil {
 	private BufferedReader buffReader;
 	private ObjectInputStream input;
 	
-	public static Logger getLog() {
-		return log;
-	}
 	public ObjectInputStream getInput() {
 		return input;
 	}
@@ -104,12 +101,14 @@ public class StreamingUtil {
 	}
 	
 	public void resetBuff(String path) throws Excecao {
-		log.debug("Resetando Buffered Stream");
+		log.debug("Resetando Buffered Reader");
 		try {
+			
 			buffReader.close();
 			reader.close();
 			reader = new FileReader(path + "\\sequence.txt");
 			buffReader = new BufferedReader(reader);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new Excecao("Erro ao resetar Buffered Stream");
