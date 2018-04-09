@@ -54,6 +54,10 @@ public class ConsoleView {
 		try {
 			System.out.println("--------------------------- PRODUTOS ---------------------------");
 			System.out.println("------------------------ CADASTRADOS: " + ProdutoBO.count() + " ------------------------");
+			System.out.println("\nDIGITE O CARACTERE CORRESPONDENTE À OPÇÃO DESEJADA:\n\n"
+					+ "1. Cadastrar Produto\n"
+					+ "2. Listar Produtos\n"
+					+ "3. Buscar Produto Existente");
 		} catch (Excecao e) {
 			e.printStackTrace();
 		}
