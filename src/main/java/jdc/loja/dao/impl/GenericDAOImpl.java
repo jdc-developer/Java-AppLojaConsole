@@ -223,9 +223,9 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	    	        }
 	    	    }
 
-	    	}); 
+	    	});
 	    	
-	    	for(int i = 0; i < 10; i++) {
+	    	for(int i = 0; i < 10 && i < files.length; i++) {
 	    		if(!files[pagina].getPath().endsWith("sequence.txt")) {
 	    			stream.setInput(new ObjectInputStream(new FileInputStream(files[pagina])));
 					C bean = (C) stream.getInput().readObject();
@@ -234,12 +234,20 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	    		pagina++;
 	    	}
 	    	
+	    } catch(ArrayIndexOutOfBoundsException e1) {
+	    	 e1.printStackTrace();
+	         throw new Excecao("Página inexistente");
+	         
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	        throw new Excecao("Erro ao listar");
 	    }
 	    
-	    log.debug("Sucesso");
+	    if(lista.isEmpty()) {
+	    	log.warn("Nenhum objeto cadastrado");
+	    }
+	    
+	    log.info("Sucesso");
 		return lista;
 	}
 	

@@ -126,7 +126,7 @@ public class TestProdutoDAO {
 			List<ProdutoBean> lista = dao.listar(0);
 			
 			for(ProdutoBean bean : lista) {
-				System.out.println(bean.getDescricao());
+				Assert.assertNotEquals(bean.getCodigo(), 0);
 			}
 		} catch(Excecao e) {
 			e.printStackTrace();

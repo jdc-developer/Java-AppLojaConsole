@@ -1,5 +1,7 @@
 package jdc.loja.test.bo;
 
+import java.util.List;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
@@ -76,6 +78,31 @@ public class TestFuncionarioBO {
 			
 			Assert.assertEquals("João Augusto", FuncionarioBO.buscar(bean.getCodigo()).getNome());
 		} catch (Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void count() {
+		try {
+			long count = FuncionarioBO.count();
+			Assert.assertNotEquals(count, 0);
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void listar() {
+		try {
+			List<FuncionarioBean> lista = FuncionarioBO.listar(0);
+			
+			for(FuncionarioBean bean : lista) {
+				Assert.assertNotEquals(bean.getCodigo(), 0);
+			}
+		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
 		}

@@ -177,4 +177,18 @@ public class TestItemVendaDAO {
 			Assert.fail();
 		}
 	}
+	
+	@Test
+	public void listar() {
+		try {
+			List<ItemVendaBean> lista = dao.listar(0);
+			
+			for(ItemVendaBean bean : lista) {
+				Assert.assertNotEquals(bean.getCodigo(), 0);
+			}
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
 }

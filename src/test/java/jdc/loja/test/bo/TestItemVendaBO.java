@@ -137,4 +137,29 @@ public class TestItemVendaBO {
 			Assert.fail();
 		}
 	}
+	
+	@Test
+	public void count() {
+		try {
+			long count = ItemVendaBO.count();
+			Assert.assertNotEquals(count, 0);
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void listar() {
+		try {
+			List<ItemVendaBean> lista = ItemVendaBO.listar(0);
+			
+			for(ItemVendaBean bean : lista) {
+				Assert.assertNotEquals(bean.getCodigo(), 0);
+			}
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
 }

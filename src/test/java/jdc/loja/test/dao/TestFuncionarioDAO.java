@@ -1,5 +1,7 @@
 package jdc.loja.test.dao;
 
+import java.util.List;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -102,10 +104,24 @@ public class TestFuncionarioDAO {
 	}
 	
 	@Test
-	public void count() {
+	public void count() throws Excecao{
 		try {
 			long count = dao.count();
 			Assert.assertNotEquals(count, 0);
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void listar() throws Excecao{
+		try {
+			List<FuncionarioBean> lista = dao.listar(0);
+			
+			for(FuncionarioBean bean : lista) {
+				Assert.assertNotEquals(bean.getCodigo(), 0);
+			}
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

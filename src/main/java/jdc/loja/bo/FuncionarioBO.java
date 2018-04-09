@@ -1,5 +1,8 @@
 package jdc.loja.bo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jdc.loja.beans.FuncionarioBean;
 import jdc.loja.dao.FuncionarioDAO;
 import jdc.loja.dao.impl.FuncionarioDAOImpl;
@@ -79,13 +82,17 @@ public abstract class FuncionarioBO {
 		getInstance().editar(bean);
 	}
 	
-	public static long count(){
+	public static long count() throws Excecao{
 		long count = 0;
-		try {
-			count = getInstance().count();
-		} catch (Excecao e) {
-			e.printStackTrace();
-		}
+		count = getInstance().count();
+		
 		return count;
+	}
+	
+	public static List<FuncionarioBean> listar(int pagina) throws Excecao{
+		List<FuncionarioBean> lista = new ArrayList<FuncionarioBean>();
+		lista = getInstance().listar(pagina);
+		
+		return lista;
 	}
 }

@@ -1,5 +1,8 @@
 package jdc.loja.bo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jdc.loja.beans.ProdutoBean;
 import jdc.loja.dao.ProdutoDAO;
 import jdc.loja.dao.impl.ProdutoDAOImpl;
@@ -79,14 +82,18 @@ public abstract class ProdutoBO {
 		getInstance().editar(bean);
 	}
 	
-	public static long count(){
+	public static long count() throws Excecao{
 		long count = 0;
-		try {
-			count = getInstance().count();
-		} catch (Excecao e) {
-			e.printStackTrace();
-		}
+		count = getInstance().count();
+		
 		return count;
+	}
+	
+	public static List<ProdutoBean> listar(int pagina) throws Excecao{
+		List<ProdutoBean> lista = new ArrayList<ProdutoBean>();
+		lista = getInstance().listar(pagina);
+		
+		return lista;
 	}
 
 }

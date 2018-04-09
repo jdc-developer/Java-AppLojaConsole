@@ -51,8 +51,12 @@ public class ConsoleView {
 	}
 	
 	public static void acao1() {
-		System.out.println("--------------------------- PRODUTOS ---------------------------");
-		System.out.println("------------------------ CADASTRADOS: " + ProdutoBO.count() + " ------------------------");
+		try {
+			System.out.println("--------------------------- PRODUTOS ---------------------------");
+			System.out.println("------------------------ CADASTRADOS: " + ProdutoBO.count() + " ------------------------");
+		} catch (Excecao e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
