@@ -226,11 +226,12 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	    	}); 
 	    	
 	    	for(int i = 0; i < 10; i++) {
-	    		stream.setInput(new ObjectInputStream(new FileInputStream(files[pagina])));
-				C bean = (C) stream.getInput().readObject();
-				lista.add(bean);
-				
-				pagina++;
+	    		if(!files[pagina].getPath().endsWith("sequence.txt")) {
+	    			stream.setInput(new ObjectInputStream(new FileInputStream(files[pagina])));
+					C bean = (C) stream.getInput().readObject();
+					lista.add(bean);
+	    		}
+	    		pagina++;
 	    	}
 	    	
 	    } catch (Exception e) {
