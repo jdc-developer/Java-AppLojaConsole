@@ -46,6 +46,7 @@ public abstract class FuncionarioBO {
 		if(bean.getNome().length() > 200) {
 			throw new Excecao("Nome não pode exceder o limite de 200 carácteres");
 		}
+		bean.setNome(bean.getNome().toUpperCase());
 		getInstance().cadastrar(bean);
 	}
 	
@@ -79,6 +80,7 @@ public abstract class FuncionarioBO {
 		if(bean.getNome().length() > 200) {
 			throw new Excecao("Nome não pode exceder o limite de 200 carácteres");
 		}
+		bean.setNome(bean.getNome().toUpperCase());
 		getInstance().editar(bean);
 	}
 	
@@ -94,5 +96,10 @@ public abstract class FuncionarioBO {
 		lista = getInstance().listar(pagina);
 		
 		return lista;
+	}
+	
+	public static FuncionarioBean buscarPorNome(String nome) throws Excecao{
+		nome = nome.toUpperCase();
+		return dao.buscarPorNome(nome);
 	}
 }

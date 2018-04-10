@@ -20,7 +20,7 @@ public class TestProdutoBO {
 	public ProdutoBean cadastro() throws Excecao {
 		
 		ProdutoBean bean = new ProdutoBean();
-		bean.setDescricao("Salgadinho Cheetos");
+		bean.setDescricao("SALGADINHO CHEETOS");
 		bean.setPreco(5);
 		ProdutoBO.cadastrar(bean);
 		
@@ -72,12 +72,12 @@ public class TestProdutoBO {
 		try {
 			ProdutoBean bean = cadastro();
 			
-			bean.setDescricao("Salgadinho Fandangos");
+			bean.setDescricao("SALGADINHO FANDANGOS");
 			bean.setPreco(6);
 			
 			ProdutoBO.editar(bean);
 			
-			Assert.assertEquals("Salgadinho Fandangos", ProdutoBO.buscar(bean.getCodigo()).getDescricao());
+			Assert.assertEquals("SALGADINHO FANDANGOS", ProdutoBO.buscar(bean.getCodigo()).getDescricao());
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -103,6 +103,18 @@ public class TestProdutoBO {
 			for(ProdutoBean bean : lista) {
 				Assert.assertNotEquals(bean.getCodigo(), 0);
 			}
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void buscarPorNome() {
+		try {
+			ProdutoBean bean = ProdutoBO.buscarPorNome("CHEETOS");
+			
+			Assert.assertTrue(bean.getDescricao().contains("CHEETOS"));
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

@@ -75,7 +75,7 @@ public class TestVendaDAO {
 	
 	public ProdutoBean cadastroProd() throws Excecao {
 		ProdutoBean bean = new ProdutoBean();
-		bean.setDescricao("Chocolate Suflair");
+		bean.setDescricao("CHOCOLATE SUFLAIR");
 		bean.setPreco(3);
 		
 		daoProd.cadastrar(bean);
@@ -104,7 +104,7 @@ public class TestVendaDAO {
 	
 	public FuncionarioBean cadastroFuncionario() throws Excecao {
 		FuncionarioBean bean = new FuncionarioBean();
-		bean.setNome("Gustavo Rocha");
+		bean.setNome("GUSTAVO ROCHA");
 		bean.setSalario(2000);
 		
 		daoFunc.cadastrar(bean);

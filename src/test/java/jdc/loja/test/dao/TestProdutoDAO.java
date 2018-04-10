@@ -45,7 +45,7 @@ public class TestProdutoDAO {
 	public ProdutoBean cadastro() throws Excecao {
 		
 		ProdutoBean bean = new ProdutoBean();
-		bean.setDescricao("Salgadinho Cheetos");
+		bean.setDescricao("SALGADINHO CHEETOS");
 		bean.setPreco(5);
 		dao.cadastrar(bean);
 		
@@ -97,12 +97,12 @@ public class TestProdutoDAO {
 		try {
 			ProdutoBean bean = cadastro();
 			
-			bean.setDescricao("Salgadinho Fandangos");
+			bean.setDescricao("SALGADINHO FANDANGOS");
 			bean.setPreco(6);
 			
 			dao.editar(bean);
 			
-			Assert.assertEquals("Salgadinho Fandangos", dao.buscar(bean.getCodigo()).getDescricao());
+			Assert.assertEquals("SALGADINHO FANDANGOS", dao.buscar(bean.getCodigo()).getDescricao());
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -128,6 +128,18 @@ public class TestProdutoDAO {
 			for(ProdutoBean bean : lista) {
 				Assert.assertNotEquals(bean.getCodigo(), 0);
 			}
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void buscarNome() throws Excecao{
+		try {
+			ProdutoBean bean = dao.buscarPorNome("CHEETOS");
+			
+			Assert.assertTrue(bean.getDescricao().contains("CHEETOS"));
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

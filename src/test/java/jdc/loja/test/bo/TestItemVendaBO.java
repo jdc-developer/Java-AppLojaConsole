@@ -45,7 +45,7 @@ public class TestItemVendaBO {
 	
 	public ProdutoBean cadastroProd() throws Excecao {
 		ProdutoBean bean = new ProdutoBean();
-		bean.setDescricao("Chocolate Suflair");
+		bean.setDescricao("CHOCOLATE SUFLAIR");
 		bean.setPreco(3);
 		
 		ProdutoBO.cadastrar(bean);
@@ -74,7 +74,7 @@ public class TestItemVendaBO {
 	
 	public FuncionarioBean cadastroFuncionario() throws Excecao {
 		FuncionarioBean bean = new FuncionarioBean();
-		bean.setNome("Gustavo Rocha");
+		bean.setNome("GUSTAVO ROCHA");
 		bean.setSalario(2000);
 		
 		FuncionarioBO.cadastrar(bean);

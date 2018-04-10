@@ -46,6 +46,7 @@ public abstract class ProdutoBO {
 		if(bean.getDescricao().length() > 200) {
 			throw new Excecao("Descrição não pode exceder o limite de 200 carácteres");
 		}
+		bean.setDescricao(bean.getDescricao().toUpperCase());
 		getInstance().cadastrar(bean);
 	}
 	
@@ -79,6 +80,7 @@ public abstract class ProdutoBO {
 		if(bean.getDescricao().length() > 200) {
 			throw new Excecao("Descrição não pode exceder o limite de 200 carácteres");
 		}
+		bean.setDescricao(bean.getDescricao().toUpperCase());
 		getInstance().editar(bean);
 	}
 	
@@ -94,6 +96,11 @@ public abstract class ProdutoBO {
 		lista = getInstance().listar(pagina);
 		
 		return lista;
+	}
+	
+	public static ProdutoBean buscarPorNome(String nome) throws Excecao{
+		nome = nome.toUpperCase();
+		return dao.buscarPorNome(nome);
 	}
 
 }

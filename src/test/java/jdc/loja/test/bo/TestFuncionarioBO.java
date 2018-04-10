@@ -19,7 +19,7 @@ public class TestFuncionarioBO {
 	
 	public FuncionarioBean cadastro() throws Excecao {
 		FuncionarioBean bean = new FuncionarioBean();
-		bean.setNome("Diego Costa");
+		bean.setNome("DIEGO COSTA");
 		bean.setSalario(1500);
 		FuncionarioBO.cadastrar(bean);
 		
@@ -71,12 +71,12 @@ public class TestFuncionarioBO {
 		try {
 			FuncionarioBean bean = cadastro();
 			
-			bean.setNome("João Augusto");
+			bean.setNome("JOÃO AUGUSTO");
 			bean.setSalario(1400);
 			
 			FuncionarioBO.editar(bean);
 			
-			Assert.assertEquals("João Augusto", FuncionarioBO.buscar(bean.getCodigo()).getNome());
+			Assert.assertEquals("JOÃO AUGUSTO", FuncionarioBO.buscar(bean.getCodigo()).getNome());
 		} catch (Excecao e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -102,6 +102,18 @@ public class TestFuncionarioBO {
 			for(FuncionarioBean bean : lista) {
 				Assert.assertNotEquals(bean.getCodigo(), 0);
 			}
+		} catch(Excecao e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void buscarPorNome() {
+		try {
+			FuncionarioBean bean = FuncionarioBO.buscarPorNome("DIEGO");
+			
+			Assert.assertTrue(bean.getNome().contains("DIEGO"));
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

@@ -36,14 +36,14 @@ import jdc.loja.util.StreamingUtil;
  */
 public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 
-	private String persistence = System.getProperty("user.dir") + "\\app-resources\\";
+	protected String persistence = System.getProperty("user.dir") + "\\app-resources\\";
 	private static final Logger log = LoggerFactory.getLogger(GenericDAOImpl.class);
 	private static int MAX_FILES = 10000;
 	
 	/**
 	 * Importante o stream para gerenciar todas as instancias dos readers, streams e writers
 	 */
-	private StreamingUtil stream;
+	protected StreamingUtil stream;
 	
 	/**
 	 * Inicializando a classe com a pasta de destino da entidade em questão
@@ -245,9 +245,10 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	    
 	    if(lista.isEmpty()) {
 	    	log.warn("Nenhum objeto cadastrado");
+	    } else {
+	    	log.info("Sucesso");
 	    }
 	    
-	    log.info("Sucesso");
 		return lista;
 	}
 	
