@@ -54,6 +54,8 @@ public class ConsoleView {
 	}
 	
 	public static void acao1() {
+		int comando = 0;
+		
 		try {
 			System.out.println("--------------------------- PRODUTOS ---------------------------");
 			System.out.println("------------------------ CADASTRADOS: " + ProdutoBO.count() + " ------------------------");
@@ -61,9 +63,23 @@ public class ConsoleView {
 					+ "1. Cadastrar Produto\n"
 					+ "2. Listar Produtos\n"
 					+ "3. Buscar Produto Existente");
+			
+			int[] validos = new int[] {1, 2, 3};
+			
+			comando = comando(validos);
 		} catch (Excecao e) {
-			e.printStackTrace();
+			callAction(1);
 		}
+		
+		if(comando != 0) {
+			callAction(comando + 10);
+		}
+	}
+	
+	public static void acao11() {
+		System.out.println("--------------------------- CADASTRAR PRODUTO ---------------------------");
+		System.out.println("\nDIGITE OS DADOS DO PRODUTO:");
+		System.out.println("Descrição:");
 	}
 	
 	/**
