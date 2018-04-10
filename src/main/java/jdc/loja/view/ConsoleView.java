@@ -47,7 +47,10 @@ public class ConsoleView {
 		} catch (Excecao e) {
 			callAction(0);
 		}
-		callAction(comando);
+		
+		if(comando != 0) {
+			callAction(comando);
+		}
 	}
 	
 	public static void acao1() {
@@ -88,6 +91,10 @@ public class ConsoleView {
 		String input = entrada.nextLine();
 		StringBuilder processedChars = new StringBuilder();
 		
+		if(input.isEmpty()) {
+			throw new Excecao("Comando inválido, digite novamente");
+		}
+		
 		for(int i=0 ; i<input.length() ; i++){
 		    char c = input.charAt(i);
 		    if(!Character.isDigit(c)){
@@ -99,7 +106,7 @@ public class ConsoleView {
 		
 		int comando = Integer.parseInt(processedChars.toString());
 		
-		for(int i = 0; i < validos.length; i++) {
+		for(int i = 1; i < validos.length; i++) {
 			if(i == comando) {
 				valido = true;
 			}
