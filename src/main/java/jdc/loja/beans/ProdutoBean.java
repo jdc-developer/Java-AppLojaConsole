@@ -33,9 +33,8 @@ public class ProdutoBean implements Serializable{
 	public void setPreco(float preco) {
 		this.preco = preco;
 	}
-	public ProdutoBean(int codigo, String descricao, float preco) {
+	public ProdutoBean(String descricao, float preco) {
 		super();
-		this.codigo = codigo;
 		this.descricao = descricao;
 		this.preco = preco;
 	}

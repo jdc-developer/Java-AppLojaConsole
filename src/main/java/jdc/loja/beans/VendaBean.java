@@ -44,10 +44,9 @@ public class VendaBean implements Serializable{
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	public VendaBean(int codigo, List<ItemVendaBean> itens, Calendar dataVenda, FuncionarioBean funcionario,
+	public VendaBean(List<ItemVendaBean> itens, Calendar dataVenda, FuncionarioBean funcionario,
 			double valor) {
 		super();
-		this.codigo = codigo;
 		this.itens = itens;
 		this.dataVenda = dataVenda;
 		this.funcionario = funcionario;

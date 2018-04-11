@@ -28,9 +28,8 @@ public class FuncionarioBean implements Serializable{
 	public void setSalario(float salario) {
 		this.salario = salario;
 	}
-	public FuncionarioBean(int codigo, String nome, float salario) {
+	public FuncionarioBean(String nome, float salario) {
 		super();
-		this.codigo = codigo;
 		this.nome = nome;
 		this.salario = salario;
 	}

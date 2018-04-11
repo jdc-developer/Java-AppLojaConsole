@@ -6,6 +6,7 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jdc.loja.beans.ProdutoBean;
 import jdc.loja.bo.ProdutoBO;
 import jdc.loja.exception.Excecao;
 
@@ -62,24 +63,55 @@ public class ConsoleView {
 			System.out.println("\nDIGITE O CARACTERE CORRESPONDENTE À OPÇÃO DESEJADA:\n\n"
 					+ "1. Cadastrar Produto\n"
 					+ "2. Listar Produtos\n"
-					+ "3. Buscar Produto Existente");
+					+ "3. Buscar Produto Existente\n"
+					+ "9. Voltar");
 			
-			int[] validos = new int[] {1, 2, 3};
+			int[] validos = new int[] {1, 2, 3, 9};
 			
 			comando = comando(validos);
 		} catch (Excecao e) {
 			callAction(1);
 		}
 		
-		if(comando != 0) {
+		if(comando != 0 && comando != 9) {
 			callAction(comando + 10);
+		} else if (comando == 9) {
+			callAction(0);
 		}
 	}
 	
 	public static void acao11() {
+		
 		System.out.println("--------------------------- CADASTRAR PRODUTO ---------------------------");
 		System.out.println("\nDIGITE OS DADOS DO PRODUTO:");
 		System.out.println("Descrição:");
+		
+		String descricao = null;
+		float valor = 0;
+		
+		try {
+			descricao = receberString();
+		} catch (Excecao e) {
+			callAction(11);
+		}
+		
+		System.out.println("\nGravado");
+		
+		try {
+			valor = receberFloat();
+		} catch (Excecao e) {
+			callAction(11);
+		}
+		
+		ProdutoBean bean = new ProdutoBean(descricao, valor);
+		
+		try {
+			ProdutoBO.cadastrar(bean);
+		} catch (Excecao e) {
+			e.printStackTrace();
+		} finally {
+			callAction(1);
+		}
 	}
 	
 	/**
@@ -122,7 +154,7 @@ public class ConsoleView {
 		
 		int comando = Integer.parseInt(processedChars.toString());
 		
-		for(int i = 1; i < validos.length; i++) {
+		for(int i = 1; i < 10; i++) {
 			if(i == comando) {
 				valido = true;
 			}
@@ -134,5 +166,52 @@ public class ConsoleView {
 		else {
 			throw new Excecao("Comando inválido, digite novamente");
 		}
+	}
+	
+	public static String receberString() throws Excecao{
+		boolean valido = false;
+		String input = entrada.next();
+		StringBuilder processedChars = new StringBuilder();
+		
+		if(input.isEmpty()) {
+			throw new Excecao("Valor inválido, digite novamente");
+		}
+		
+		for(int i=0 ; i<input.length() ; i++){
+		    char c = input.charAt(i);
+		    if(Character.isLetter(c)){
+		    	valido = true;
+		    }
+		    processedChars.append(c);
+		}
+		
+		if(valido) {
+			return processedChars.toString();
+		}
+		else {
+			throw new Excecao("Valor inválido, digite novamente");
+		}
+	}
+	
+	public static float receberFloat() throws Excecao{
+		String input = entrada.nextLine();
+		StringBuilder processedChars = new StringBuilder();
+		
+		if(input.isEmpty()) {
+			throw new Excecao("Valor inválido, digite novamente");
+		}
+		
+		for(int i=0 ; i<input.length() ; i++){
+		    char c = input.charAt(i);
+		    if(!Character.isDigit(c)){
+		    	throw new Excecao("Valor inválido, digite novamente");
+		    }else{
+		        processedChars.append(c);
+		    }
+		}
+		
+		float valor = Float.parseFloat(processedChars.toString());
+		
+		return valor;
 	}
 }

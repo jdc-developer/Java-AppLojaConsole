@@ -35,9 +35,8 @@ public class ItemVendaBean implements Serializable{
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
-	public ItemVendaBean(int codigo, VendaBean venda, ProdutoBean produto, int quantidade) {
+	public ItemVendaBean(VendaBean venda, ProdutoBean produto, int quantidade) {
 		super();
-		this.codigo = codigo;
 		this.venda = venda;
 		this.produto = produto;
 		this.quantidade = quantidade;
