@@ -95,7 +95,8 @@ public class ConsoleView {
 			callAction(11);
 		}
 		
-		System.out.println("\nGravado");
+		System.out.println("\nDescrição salva");
+		System.out.println("Valor:");
 		
 		try {
 			valor = receberFloat();
@@ -136,7 +137,7 @@ public class ConsoleView {
 	 */
 	public static int comando(int[] validos) throws Excecao {
 		boolean valido = false;
-		String input = entrada.nextLine();
+		String input = entrada.next();
 		StringBuilder processedChars = new StringBuilder();
 		
 		if(input.isEmpty()) {
@@ -194,7 +195,7 @@ public class ConsoleView {
 	}
 	
 	public static float receberFloat() throws Excecao{
-		String input = entrada.nextLine();
+		String input = entrada.next();
 		StringBuilder processedChars = new StringBuilder();
 		
 		if(input.isEmpty()) {
