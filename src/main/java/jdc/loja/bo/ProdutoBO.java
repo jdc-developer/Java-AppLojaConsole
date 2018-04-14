@@ -98,7 +98,7 @@ public abstract class ProdutoBO {
 		return lista;
 	}
 	
-	public static ProdutoBean buscarPorNome(String nome) throws Excecao{
+	public static List<ProdutoBean> buscarPorNome(String nome) throws Excecao{
 		nome = nome.toUpperCase();
 		return dao.buscarPorNome(nome);
 	}

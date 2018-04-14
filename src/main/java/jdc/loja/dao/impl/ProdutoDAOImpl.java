@@ -3,6 +3,8 @@ package jdc.loja.dao.impl;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,10 +24,10 @@ public class ProdutoDAOImpl extends GenericDAOImpl<ProdutoBean, Integer> impleme
 	/**
 	 * Busca por parte do nome customizada
 	 */
-	public ProdutoBean buscarPorNome(String nome) throws Excecao {
+	public List<ProdutoBean> buscarPorNome(String nome) throws Excecao {
 		log.info("Buscando...");
 		
-		ProdutoBean bean = null;
+		List<ProdutoBean> lista = new ArrayList<ProdutoBean>();
 
 	    try {
 	    	
@@ -38,7 +40,7 @@ public class ProdutoDAOImpl extends GenericDAOImpl<ProdutoBean, Integer> impleme
 	    			ProdutoBean busca = (ProdutoBean) stream.getInput().readObject();
 
 					if(busca.getDescricao().contains(nome)) {
-						bean = busca;
+						lista.add(busca);
 					}
 	    		}
 	    	}
@@ -48,12 +50,12 @@ public class ProdutoDAOImpl extends GenericDAOImpl<ProdutoBean, Integer> impleme
 	        throw new Excecao("Erro ao buscar");
 	    }
 	    
-	    if(bean == null) {
+	    if(lista.isEmpty()) {
 	    	log.warn("Não encontrado");
 	    } else {
 	    	log.info("Sucesso");
 	    }
 	    
-		return bean;
+		return lista;
 	}
 }

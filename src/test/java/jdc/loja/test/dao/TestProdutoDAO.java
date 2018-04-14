@@ -123,7 +123,7 @@ public class TestProdutoDAO {
 	@Test
 	public void listar() {
 		try {
-			List<ProdutoBean> lista = dao.listar(0);
+			List<ProdutoBean> lista = dao.listar(1);
 			
 			for(ProdutoBean bean : lista) {
 				Assert.assertNotEquals(bean.getCodigo(), 0);
@@ -137,9 +137,11 @@ public class TestProdutoDAO {
 	@Test
 	public void buscarNome() throws Excecao{
 		try {
-			ProdutoBean bean = dao.buscarPorNome("CHEETOS");
+			List<ProdutoBean> lista = dao.buscarPorNome("CHEETOS");
 			
-			Assert.assertTrue(bean.getDescricao().contains("CHEETOS"));
+			for(ProdutoBean bean: lista) {
+				Assert.assertTrue(bean.getDescricao().contains("CHEETOS"));
+			}
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

@@ -112,9 +112,11 @@ public class TestProdutoBO {
 	@Test
 	public void buscarPorNome() {
 		try {
-			ProdutoBean bean = ProdutoBO.buscarPorNome("CHEETOS");
+			List<ProdutoBean> lista = ProdutoBO.buscarPorNome("CHEETOS");
 			
-			Assert.assertTrue(bean.getDescricao().contains("CHEETOS"));
+			for(ProdutoBean bean : lista) {
+				Assert.assertTrue(bean.getDescricao().contains("CHEETOS"));	
+			}
 		} catch(Excecao e) {
 			e.printStackTrace();
 			Assert.fail();

@@ -34,7 +34,7 @@ public class ConsoleUtil {
 	 * @return valor do comando
 	 * @throws Excecao
 	 */
-	public static int comando(int[] validos) throws Excecao {
+	public static int comando(Integer[] validos) throws Excecao {
 		boolean valido = false;
 		String input = entrada.next();
 		StringBuilder processedChars = new StringBuilder();
@@ -125,7 +125,7 @@ public class ConsoleUtil {
 		System.out.println("\n1. Confirmar / 2. Cancelar");
 		
 		int comando = 0;
-		int validos[] = new int[] {1, 2};
+		Integer validos[] = new Integer[] {1, 2};
 		
 		try {
 			comando = comando(validos);

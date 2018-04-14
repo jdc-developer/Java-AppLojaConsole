@@ -194,7 +194,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	        throw new Excecao("Erro ao contar arquivos");
-	    }
+	    } 
 	    log.debug("Sucesso");
 		return i;
 	}
@@ -204,7 +204,7 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 		log.info("Listando...");
 	    
 	    List<C> lista = new ArrayList<C>();
-	    pagina = pagina * 10;
+	    pagina = (pagina - 1) * 10;
 
 	    try {
 	    	
@@ -225,7 +225,14 @@ public abstract class GenericDAOImpl<C , K> implements GenericDAO<C, K>{
 
 	    	});
 	    	
-	    	for(int i = 0; i < 10 && i < files.length; i++) {
+	    	int count = 10;
+	    	int val = files.length - pagina;
+	    	
+	    	if(val < 10) {
+	    		count = val;
+	    	}
+	    	
+	    	for(int i = 0; i < count; i++) {
 	    		if(!files[pagina].getPath().endsWith("sequence.txt")) {
 	    			stream.setInput(new ObjectInputStream(new FileInputStream(files[pagina])));
 					C bean = (C) stream.getInput().readObject();
